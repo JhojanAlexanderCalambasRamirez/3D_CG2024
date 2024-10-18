@@ -1,0 +1,5 @@
+*.vsconfig text eol=If
+*.asset text eol=If
+*.meta text eol=If
+*.json text eol=If
+*.text text eol=If
