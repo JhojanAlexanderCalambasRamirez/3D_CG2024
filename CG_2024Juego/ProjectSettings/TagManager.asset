@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Climb
+  - Fly
+  - Animal
+  - Water
+  - Stair
   layers:
   - Default
   - TransparentFX
@@ -13,6 +18,9 @@ TagManager:
   - UI
   - 
   - 
+  - PostProcessing
+  - Snapshot Zone
+  - Player
   - 
   - 
   - 
@@ -22,21 +30,18 @@ TagManager:
   - 
   - 
   - 
+  - Animal
+  - 
+  - 
+  - Enemy
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Item
+  - Interaction
   m_SortingLayers:
   - name: Default
     uniqueID: 0
