@@ -137,6 +137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planks (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -216,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -273,9 +281,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -326,6 +346,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -396,6 +420,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -482,6 +510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1640357401124442, guid: 512245daca745f64693d790c6c69d575, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4289402460677342, guid: 512245daca745f64693d790c6c69d575, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -542,6 +574,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -628,6 +664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -688,6 +728,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -764,6 +808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1385373272859908, guid: dd97834f6f07b5f48967e131f371b7f0, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4264342752944190, guid: dd97834f6f07b5f48967e131f371b7f0, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -815,6 +863,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1670816685451960, guid: 7884f7504291b4c499081a2ce20ef792, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4209757770927996, guid: 7884f7504291b4c499081a2ce20ef792, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -869,6 +921,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -927,6 +983,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1640357401124442, guid: 512245daca745f64693d790c6c69d575, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4289402460677342, guid: 512245daca745f64693d790c6c69d575, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -995,7 +1055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180540479}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Lanterns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,6 +1096,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -1095,6 +1159,10 @@ PrefabInstance:
     - target: {fileID: 1645912678775834, guid: 49561c9ced9a8a14a9aa40be4dd8248c, type: 3}
       propertyPath: m_Name
       value: TurnL (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645912678775834, guid: 49561c9ced9a8a14a9aa40be4dd8248c, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4072993402720666, guid: 49561c9ced9a8a14a9aa40be4dd8248c, type: 3}
       propertyPath: m_RootOrder
@@ -1175,6 +1243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tunnel3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1057628517641284, guid: 074e9fd3c543c144e972e97dff953b88, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4610622268726666, guid: 074e9fd3c543c144e972e97dff953b88, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1250,9 +1322,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -1307,6 +1391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1357,7 +1445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 310801853}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ReflectionProbes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,7 +1487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314199194}
   - component: {fileID: 314199193}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BLUE ORE Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,6 +1561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1536,9 +1628,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -1595,6 +1699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1647,6 +1755,10 @@ PrefabInstance:
     - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_Name
       value: Support2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
@@ -1721,6 +1833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -1782,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurnR (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1629536833916262, guid: 2b41853036497ac4fa1d212a15ccff4c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4896766740774158, guid: 2b41853036497ac4fa1d212a15ccff4c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1840,6 +1960,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -1918,7 +2042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678122045}
   - component: {fileID: 678122044}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RED ORE Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,6 +2112,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1629536833916262, guid: 2b41853036497ac4fa1d212a15ccff4c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4896766740774158, guid: 2b41853036497ac4fa1d212a15ccff4c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2055,6 +2183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2116,6 +2248,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b53586081307f1543bb0315828b57953, type: 3}
+--- !u!1001 &735509780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1685351075806838147, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_Name
+      value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.959408
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.517
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460632873695997066, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13433908528e981469edd300500eae92, type: 3}
 --- !u!1001 &754072846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2127,6 +2332,10 @@ PrefabInstance:
     - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_Name
       value: Support2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
@@ -2181,6 +2390,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1678759770172968, guid: 318b816fee8dea44588d070c5a17f873, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1779761706634458, guid: 318b816fee8dea44588d070c5a17f873, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880737949742296, guid: 318b816fee8dea44588d070c5a17f873, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4105734142940820, guid: 318b816fee8dea44588d070c5a17f873, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2263,6 +2484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1336849529360296, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4823908820836580, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2321,6 +2546,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -2385,9 +2614,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -2447,6 +2688,10 @@ PrefabInstance:
     - target: {fileID: 1950120980519454, guid: 10f81f7f1e6523b4fa0b5b6f0ea61f4c, type: 3}
       propertyPath: m_Name
       value: Ladder (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950120980519454, guid: 10f81f7f1e6523b4fa0b5b6f0ea61f4c, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4869118626579586, guid: 10f81f7f1e6523b4fa0b5b6f0ea61f4c, type: 3}
       propertyPath: m_RootOrder
@@ -2515,6 +2760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2563,6 +2812,10 @@ PrefabInstance:
     - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_Name
       value: Rock2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
@@ -2639,6 +2892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2688,6 +2945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2757,7 +3018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 860306757}
   - component: {fileID: 860306758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,6 +3084,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -2893,6 +3158,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495683491966598, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.16
+      objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2925,6 +3206,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 108990059368549358, guid: 57bc482487154a64085c1d0847e454b3,
+        type: 3}
+      propertyPath: m_Range
+      value: 9.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 108990059368549358, guid: 57bc482487154a64085c1d0847e454b3,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 11.97
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2941,6 +3232,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -3002,6 +3297,10 @@ PrefabInstance:
     - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_Name
       value: Support2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
@@ -3078,6 +3377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3137,7 +3440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950930851}
   - component: {fileID: 950930850}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3204,6 +3507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planks (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -3267,6 +3574,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1903082220}
     m_Modifications:
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3315,6 +3626,10 @@ PrefabInstance:
     - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_Name
       value: Rock2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
@@ -3391,6 +3706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1398440701277180, guid: 1f136777da95ba641be965f3b39286ce, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4653325439991578, guid: 1f136777da95ba641be965f3b39286ce, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3454,6 +3773,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3514,6 +3837,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -3594,6 +3921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3646,6 +3977,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -3705,6 +4040,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -3777,6 +4116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -3834,6 +4177,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1088743739772638, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161704441830598, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275084491436936, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4344557194693220, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3923,6 +4278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planks (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3980,7 +4339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244404491}
   - component: {fileID: 1244404490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4053,6 +4412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -4105,6 +4468,10 @@ PrefabInstance:
     - target: {fileID: 1336849529360296, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
       propertyPath: m_Name
       value: Crate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336849529360296, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4823908820836580, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
       propertyPath: m_RootOrder
@@ -4163,6 +4530,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1903082220}
     m_Modifications:
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4219,6 +4590,10 @@ PrefabInstance:
     - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_Name
       value: Rock2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
@@ -4307,9 +4682,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -4363,6 +4750,10 @@ PrefabInstance:
     - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_Name
       value: Support2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
@@ -4439,6 +4830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4498,7 +4893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476856776}
   - component: {fileID: 1476856775}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4563,7 +4958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492382099}
   - component: {fileID: 1492382100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4626,6 +5021,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1653069070721738, guid: a1c6dc8e84ded3c4fb88df867e83a271, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4826429794532074, guid: a1c6dc8e84ded3c4fb88df867e83a271, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4691,7 +5090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533305769}
   - component: {fileID: 1533305770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4758,6 +5157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -4817,6 +5220,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1981182494951078, guid: 918e9495f6e289f4983e7e744ac76c15, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4882894442979162, guid: 918e9495f6e289f4983e7e744ac76c15, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4872,6 +5279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4917,6 +5328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1336849529360296, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4823908820836580, guid: c8e12912818819f49958ae146c6ffc96, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4973,6 +5388,10 @@ PrefabInstance:
     - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_Name
       value: Support2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
@@ -5040,7 +5459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663316550}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Planks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5085,6 +5504,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1057628517641284, guid: 074e9fd3c543c144e972e97dff953b88, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4610622268726666, guid: 074e9fd3c543c144e972e97dff953b88, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5149,6 +5572,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -5225,9 +5652,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -5288,6 +5727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1293430722865970, guid: 473537c058b2b4c478082268e7026d93, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5341,7 +5784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748158472}
   - component: {fileID: 1748158471}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GREEN ORE Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5411,6 +5854,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1645912678775834, guid: 49561c9ced9a8a14a9aa40be4dd8248c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4072993402720666, guid: 49561c9ced9a8a14a9aa40be4dd8248c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5480,9 +5927,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1088743739772638, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161704441830598, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1275084491436936, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
       propertyPath: m_Name
       value: OreRed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275084491436936, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4344557194693220, guid: a957dc986069ca3409a5fb1599a3cad8, type: 3}
       propertyPath: m_RootOrder
@@ -5564,6 +6023,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2059625957}
     m_Modifications:
+    - target: {fileID: 1968385980893518, guid: f134863d956a12a41a5e0ccdedb110ca, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4399536890800422, guid: f134863d956a12a41a5e0ccdedb110ca, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5627,6 +6090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1950120980519454, guid: 10f81f7f1e6523b4fa0b5b6f0ea61f4c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4869118626579586, guid: 10f81f7f1e6523b4fa0b5b6f0ea61f4c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -5700,6 +6167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -5757,6 +6228,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1972344198}
     m_Modifications:
+    - target: {fileID: 1682122363741002, guid: 3748494179844f94b81383563d2fb31d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870635276806860, guid: 3748494179844f94b81383563d2fb31d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990963258372974, guid: 3748494179844f94b81383563d2fb31d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4414344445486422, guid: 3748494179844f94b81383563d2fb31d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5838,6 +6321,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -5922,7 +6409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867227838}
   - component: {fileID: 1867227839}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Reflection Probe (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5995,6 +6482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408828535656082, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4808419896833138, guid: 7a4e041ab060e0043a131d10421bdfda, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6045,7 +6536,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1903082220}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6115,6 +6606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -6174,6 +6669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planks (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6230,7 +6729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972344198}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6275,6 +6774,10 @@ PrefabInstance:
     - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_Name
       value: Planks (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245039659871948, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4572783783184152, guid: f61b2bee68d853c4ab7baf6062cda8d4, type: 3}
       propertyPath: m_RootOrder
@@ -6347,13 +6850,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 180540479}
     m_Modifications:
+    - target: {fileID: 1454373857832846, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_Name
       value: Lantern (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1933125203065102, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971045956001356, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
       propertyPath: m_RootOrder
@@ -6413,7 +6928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059625957}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6463,6 +6978,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -6525,6 +7044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1330887786511532, guid: b53586081307f1543bb0315828b57953, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4246233310359716, guid: b53586081307f1543bb0315828b57953, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -6586,6 +7109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Support1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6638,6 +7165,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -6697,6 +7228,10 @@ PrefabInstance:
     - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_Name
       value: Support1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891452097314006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_RootOrder
@@ -6769,3 +7304,4 @@ SceneRoots:
   - {fileID: 180540479}
   - {fileID: 310801853}
   - {fileID: 1663316550}
+  - {fileID: 735509780}
