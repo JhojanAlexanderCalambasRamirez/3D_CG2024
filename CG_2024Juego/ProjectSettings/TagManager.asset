@@ -10,6 +10,9 @@ TagManager:
   - Water
   - Stair
   - Player1
+  - ZonaVerde
+  - ZonaRoja
+  - ZonaAzul
   layers:
   - Default
   - TransparentFX
