@@ -7,16 +7,18 @@ public class Vida : MonoBehaviour
 {
     public float Salud = 100;
     public float SaludMaxima = 100;
-
     public Image BarraSalud;
     public Text TextoSalud;
 
     private SkinnedMeshRenderer[] meshRenderers;
     private List<Color[]> originalColors = new List<Color[]>();
 
+    // Referencia al controlador del menú de muerte
+    public MenuMuerteController menuMuerteController;
+
     void Start()
     {
-        // Obtener todos los SkinnedMeshRenderers del personaje
+        // Obtener los SkinnedMeshRenderers del personaje
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
 
         // Almacenar los colores originales de cada material
@@ -34,15 +36,19 @@ public class Vida : MonoBehaviour
     void Update()
     {
         ActualizarInterfaz();
+
+        // Notificar al MenuMuerteController cuando la salud llega a cero
+        if (Salud <= 0 && menuMuerteController != null)
+        {
+            menuMuerteController.ActivarMenuMuerte();
+        }
     }
 
     public void RecibirDaño(float daño)
     {
         Salud -= daño;
         ActualizarInterfaz();
-
-        // Iniciar la corrutina para el efecto visual de daño
-        StartCoroutine(MostrarDaño());
+        StartCoroutine(MostrarDaño()); // Efecto visual al recibir daño
     }
 
     void ActualizarInterfaz()
@@ -53,30 +59,23 @@ public class Vida : MonoBehaviour
 
     IEnumerator MostrarDaño()
     {
-        // Rojo moderado en tono e intensidad
-        Color moderateRed = new Color(0.6f, 0.2f, 0.2f, 1f); // Rojo menos saturado
+        Color moderateRed = new Color(0.6f, 0.2f, 0.2f, 1f);
 
-        // Cambiar el color de todos los materiales a rojo moderado
         foreach (var renderer in meshRenderers)
         {
             foreach (var material in renderer.materials)
             {
-                // Activar emisión con menor intensidad
                 if (material.HasProperty("_EmissionColor"))
                 {
                     material.EnableKeyword("_EMISSION");
-                    material.SetColor("_EmissionColor", moderateRed * 0.6f); // Emisión moderada
+                    material.SetColor("_EmissionColor", moderateRed * 0.6f);
                 }
-
-                // Cambiar el color principal al rojo moderado
                 material.color = moderateRed;
             }
         }
 
-        // Esperar un segundo
         yield return new WaitForSeconds(1f);
 
-        // Restaurar el color original de cada material y desactivar emisión
         for (int i = 0; i < meshRenderers.Length; i++)
         {
             for (int j = 0; j < meshRenderers[i].materials.Length; j++)

@@ -9,25 +9,23 @@ public class MenuInicial : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de que el panel de controles esté desactivado al iniciar
         controlesPanel.SetActive(false);
+        Time.timeScale = 1f; // Asegura el tiempo de juego normal al iniciar
     }
 
     public void LoadScene(string SceneName)
     {
-        // Cambia a la escena del juego
+        Time.timeScale = 1f; // Restaurar el tiempo antes de cambiar de escena
         SceneManager.LoadScene(SceneName);
     }
 
     public void AbrirControles()
     {
-        // Abre el panel de controles cuando se presione el botón de controles
         controlesPanel.SetActive(true);
     }
 
     public void VolverAlMenu()
     {
-        // Cierra el panel de controles y vuelve al menú principal
         controlesPanel.SetActive(false);
     }
 }
