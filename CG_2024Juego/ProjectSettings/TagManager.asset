@@ -9,6 +9,12 @@ TagManager:
   - Animal
   - Water
   - Stair
+  - Player1
+  - ZonaVerde
+  - ZonaRoja
+  - ZonaAzul
+  - Nombre1
+  - nombre1
   layers:
   - Default
   - TransparentFX
