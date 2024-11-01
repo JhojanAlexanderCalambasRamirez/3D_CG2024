@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SCENE/Bosque-Limitado.unity
     guid: c0d944ca9defd20449bc336e50d75a08
+  - enabled: 1
+    path: Assets/SCENE/Ciudad.unity
+    guid: becca19b86da74b4696c89ff8d644228
   m_configObjects: {}

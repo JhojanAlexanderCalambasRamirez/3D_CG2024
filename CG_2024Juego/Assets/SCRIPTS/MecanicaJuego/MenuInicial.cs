@@ -13,10 +13,10 @@ public class MenuInicial : MonoBehaviour
         controlesPanel.SetActive(false);
     }
 
-    public void jugar()
+    public void LoadScene(string SceneName)
     {
         // Cambia a la escena del juego
-        SceneManager.LoadScene("Mina");
+        SceneManager.LoadScene(SceneName);
     }
 
     public void AbrirControles()
