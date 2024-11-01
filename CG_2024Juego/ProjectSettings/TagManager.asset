@@ -13,6 +13,8 @@ TagManager:
   - ZonaVerde
   - ZonaRoja
   - ZonaAzul
+  - Nombre1
+  - nombre1
   layers:
   - Default
   - TransparentFX

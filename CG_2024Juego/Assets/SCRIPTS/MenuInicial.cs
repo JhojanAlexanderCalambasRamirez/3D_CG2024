@@ -16,7 +16,7 @@ public class MenuInicial : MonoBehaviour
     public void jugar()
     {
         // Cambia a la escena del juego
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Mina");
     }
 
     public void AbrirControles()
