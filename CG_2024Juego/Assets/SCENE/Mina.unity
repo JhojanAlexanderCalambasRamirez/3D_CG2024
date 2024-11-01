@@ -676,9 +676,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126499993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.54, z: -2.559}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1874502099}
@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 117.51684
+      value: 117.52
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -980,7 +980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 71.28885
+      value: 63.45
       objectReference: {fileID: 0}
     - target: {fileID: 4004468145395006, guid: a0ac4c6540ad663468d86b7d6bb07c9d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1679,7 +1679,7 @@ GameObject:
   - component: {fileID: 323502640}
   - component: {fileID: 323502639}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NombreJugador
   m_TagString: nombre1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,15 +2585,41 @@ PrefabInstance:
       propertyPath: groundMask.m_Bits
       value: 2048
       objectReference: {fileID: 0}
+    - target: {fileID: 7464290123287246591, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464290123287246591, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464290123287246591, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7464290123287246591, guid: 13433908528e981469edd300500eae92,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2028943595816986425, guid: 13433908528e981469edd300500eae92,
         type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 126499994}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13433908528e981469edd300500eae92, type: 3}
+--- !u!20 &735509781 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7464290123287246591, guid: 13433908528e981469edd300500eae92,
+    type: 3}
+  m_PrefabInstance: {fileID: 735509780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &754072846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3222,7 +3248,7 @@ GameObject:
   - component: {fileID: 814130990}
   - component: {fileID: 814130989}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: 'Player:'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7249,8 +7275,8 @@ Canvas:
   m_GameObject: {fileID: 1874502098}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 735509781}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
