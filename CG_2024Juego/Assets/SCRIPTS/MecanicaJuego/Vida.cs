@@ -38,10 +38,11 @@ public class Vida : MonoBehaviour
         ActualizarInterfaz();
 
         // Notificar al MenuMuerteController cuando la salud llega a cero
-        if (Salud <= 0 && menuMuerteController != null)
+        if (Salud <= 0 && menuMuerteController != null && !menuMuerteController.menuMuerte.activeSelf)
         {
             menuMuerteController.ActivarMenuMuerte();
         }
+
     }
 
     public void RecibirDaño(float daño)
