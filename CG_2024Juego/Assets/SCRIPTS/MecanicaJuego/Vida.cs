@@ -18,6 +18,13 @@ public class Vida : MonoBehaviour
 
     void Start()
     {
+        // Asegúrate de que menuMuerteController esté asignado
+        if (menuMuerteController == null)
+        {
+            Debug.LogError("MenuMuerteController no está asignado en el Inspector");
+            return;
+        }
+
         // Obtener los SkinnedMeshRenderers del personaje
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
 
@@ -40,9 +47,9 @@ public class Vida : MonoBehaviour
         // Notificar al MenuMuerteController cuando la salud llega a cero
         if (Salud <= 0 && menuMuerteController != null && !menuMuerteController.menuMuerte.activeSelf)
         {
+            Debug.Log("Activando el menú de muerte");
             menuMuerteController.ActivarMenuMuerte();
         }
-
     }
 
     public void RecibirDaño(float daño)

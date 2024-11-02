@@ -10,12 +10,10 @@ public class MenuInicial : MonoBehaviour
     void Start()
     {
         controlesPanel.SetActive(false);
-        Time.timeScale = 1f; // Asegura el tiempo de juego normal al iniciar
     }
 
     public void LoadScene(string SceneName)
     {
-        Time.timeScale = 1f; // Restaurar el tiempo antes de cambiar de escena
         SceneManager.LoadScene(SceneName);
     }
 
