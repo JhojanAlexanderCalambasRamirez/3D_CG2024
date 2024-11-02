@@ -14,8 +14,13 @@ public class MenuInicial : MonoBehaviour
 
     public void LoadScene(string SceneName)
     {
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f;
+        }
         SceneManager.LoadScene(SceneName);
     }
+
 
     public void AbrirControles()
     {

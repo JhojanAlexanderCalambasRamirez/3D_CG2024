@@ -37,8 +37,9 @@ public class MenuMuerteController : MonoBehaviour
     public void IrAlMenuPrincipal()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadSceneAsync("MenuPrincipal", LoadSceneMode.Single);
     }
+
 
     public void RecargarEscena()
     {
