@@ -12,15 +12,35 @@ public class MenuInicial : MonoBehaviour
         controlesPanel.SetActive(false);
     }
 
-    public void LoadScene(string SceneName)
+    // Método para cargar la escena usando el nombre
+    public void LoadSceneByName(string sceneName)
     {
         if (Time.timeScale != 1f)
         {
             Time.timeScale = 1f;
         }
-        SceneManager.LoadScene(SceneName);
+
+        // Verifica si la escena solicitada coincide con "Bosque-Limitado"
+        if (sceneName == "Bosque-Limitado" || SceneManager.GetActiveScene().name != sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
+    // Método para cargar la escena usando el índice en Build Settings
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        // Verifica si el índice coincide con el de "Bosque-Limitado"
+        if (sceneIndex == 2 || SceneManager.GetActiveScene().buildIndex != sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+    }
 
     public void AbrirControles()
     {
