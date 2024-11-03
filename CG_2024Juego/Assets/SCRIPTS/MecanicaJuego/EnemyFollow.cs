@@ -23,17 +23,29 @@ public class EnemyFollow : MonoBehaviour
         {
             player = playerObj.transform;
             vidaJugador = playerObj.GetComponent<Vida>(); // Obtiene el componente Vida del jugador
+
+            // Verifica si el componente Vida está presente
+            if (vidaJugador == null)
+            {
+                Debug.LogError("El objeto del jugador no tiene un componente 'Vida'.");
+            }
         }
         else
-     
+        {
+            Debug.LogError("No se encontró ningún objeto con el tag 'Player1'.");
+        }
 
         // Obtén el componente Animator del enemigo
         animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("No se encontró el componente Animator en el enemigo.");
+        }
     }
 
     void Update()
     {
-        if (player != null && vidaJugador != null)
+        if (player != null && vidaJugador != null && animator != null)
         {
             // Calcula la distancia entre el enemigo y el jugador
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
