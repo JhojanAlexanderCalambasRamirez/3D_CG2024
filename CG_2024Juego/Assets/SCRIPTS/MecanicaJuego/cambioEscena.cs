@@ -6,10 +6,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class cambioEscena : MonoBehaviour
+public class CambioEscena : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(0);
+        // Verifica si el objeto que colisiona tiene el tag "Player1"
+        if (other.CompareTag("Player1"))
+        {
+            // Cambia a la escena con índice 0
+            SceneManager.LoadScene(0);
+        }
+        else if (other.CompareTag("Player2"))
+        {
+            // Cambia a la escena con índice 1
+            SceneManager.LoadScene(1);
+        }
     }
 }

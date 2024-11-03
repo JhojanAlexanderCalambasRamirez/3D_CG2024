@@ -25,9 +25,7 @@ public class EnemyFollow : MonoBehaviour
             vidaJugador = playerObj.GetComponent<Vida>(); // Obtiene el componente Vida del jugador
         }
         else
-        {
-            Debug.LogWarning("Player no encontrado en la escena.");
-        }
+     
 
         // Obtén el componente Animator del enemigo
         animator = GetComponent<Animator>();
