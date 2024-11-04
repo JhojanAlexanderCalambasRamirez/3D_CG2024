@@ -71,14 +71,32 @@ public class Vida : MonoBehaviour
         {
             if (esAtaqueJefe)
             {
-                muertePorJefe = true;
+                animator.Play("JefeMeMata");
             }
             else
             {
-                muertePorEnemigo = true;
+                animator.Play("EnemigosMeMata");
             }
+
+            // Llama a la función OnDeath después de la animación
+            StartCoroutine(OnDeath());
         }
     }
+
+    private IEnumerator OnDeath()
+    {
+        // Esperar hasta que la animación de muerte esté activa
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("JefeMeMata") && !animator.GetCurrentAnimatorStateInfo(0).IsName("EnemigosMeMata"))
+        {
+            yield return null;
+        }
+
+        // Esperar la duración de la animación de muerte
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        menuMuerteController.ActivarMenuMuerte();
+    }
+
 
     void ActualizarInterfaz()
     {

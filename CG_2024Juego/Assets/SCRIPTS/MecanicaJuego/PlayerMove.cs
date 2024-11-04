@@ -1,29 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
     public float runSpeed = 7;
     public float rotationSpeed = 250;
-
     public Animator animator;
-    private float x, y;
-
     public Rigidbody rb;
-    public float jumpHeight = 3;
-
     public Transform groundCheck;
     public float groundDistance = 0.1f;
     public LayerMask groundMask;
-
-    bool isGrounded;
-    bool hasSword = false;
-    bool isDead = false;
-    int punchToggle = 0;
-
-    // Referencia a la clase Vida
     public Vida vida;
+
+    private float x, y;
+    private bool isGrounded;
+    private bool hasSword = false;
+    private bool isDead = false;
+    private int punchToggle = 0;
+    public float jumpHeight = 3;
 
     void Update()
     {
@@ -83,7 +76,7 @@ public class PlayerMove : MonoBehaviour
             animator.Play("GuardarEspada");
         }
 
-        // Ejemplo de daño por enemigo y jefe (reemplaza con condiciones reales)
+        // Simulación de daño para pruebas
         if (Input.GetKeyDown("k"))  // Daño de enemigo
         {
             vida.RecibirDaño(vida.Salud, false); // Muerte por enemigo
