@@ -24749,6 +24749,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
       propertyPath: m_Layer
@@ -42278,33 +42283,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 349001960}
   m_SourcePrefab: {fileID: 100100000, guid: 1893b7edd0ad11b4e9f6f17eeb9455b6, type: 3}
---- !u!1 &242507892 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 124836, guid: b4bb1f5d4e31a07409ece01b4cf53b22,
-    type: 3}
-  m_PrefabInstance: {fileID: 1429119072}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &242507896
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242507892}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.3915334, y: 1.9808401, z: 0.9063636}
-  m_Center: {x: -3.195691, y: 0.9887168, z: 0.046244055}
 --- !u!1001 &242512822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51585,6 +51563,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
       propertyPath: m_Layer
@@ -54057,6 +54040,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
@@ -120031,6 +120019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
@@ -219108,33 +219101,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 939665422}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1269146594 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 124836, guid: b4bb1f5d4e31a07409ece01b4cf53b22,
-    type: 3}
-  m_PrefabInstance: {fileID: 1795456861}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1269146598
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269146594}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 6.3915334, y: 1.9808401, z: 0.9063636}
-  m_Center: {x: -3.195691, y: 0.9887168, z: 0.046244055}
 --- !u!1 &1269438646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 166598, guid: e891df2b218bdaf45ad012d0e25fb64c,
@@ -246031,11 +245997,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 124836, guid: b4bb1f5d4e31a07409ece01b4cf53b22,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 242507896}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bb1f5d4e31a07409ece01b4cf53b22, type: 3}
 --- !u!1001 &1429151455
 PrefabInstance:
@@ -256265,7 +256227,16 @@ MonoBehaviour:
   SaludMaxima: 100
   BarraSalud: {fileID: 17820403}
   TextoSalud: {fileID: 912626235}
+  animator: {fileID: 1481962498}
   menuMuerteController: {fileID: 1735342601}
+  muertePorJefe: 0
+  muertePorEnemigo: 0
+--- !u!95 &1481962498 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5388677521875434819, guid: 13433908528e981469edd300500eae92,
+    type: 3}
+  m_PrefabInstance: {fileID: 1787883934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1482165669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273802,6 +273773,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
       propertyPath: m_Layer
@@ -288544,6 +288520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
@@ -315208,6 +315189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460632873695997066, guid: 13433908528e981469edd300500eae92,
         type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1481962494}
+    - target: {fileID: 7460632873695997066, guid: 13433908528e981469edd300500eae92,
+        type: 3}
       propertyPath: groundMask.m_Bits
       value: 2048
       objectReference: {fileID: 0}
@@ -315830,6 +315816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
@@ -316455,11 +316446,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 124836, guid: b4bb1f5d4e31a07409ece01b4cf53b22,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1269146598}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bb1f5d4e31a07409ece01b4cf53b22, type: 3}
 --- !u!1 &1795863694 stripped
 GameObject:
@@ -357033,6 +357020,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}
       propertyPath: m_Layer
@@ -365030,6 +365022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807398225537036655, guid: c1bcb54d54d42c443bf8048d663c2862,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 7817698337948614070, guid: c1bcb54d54d42c443bf8048d663c2862,
         type: 3}

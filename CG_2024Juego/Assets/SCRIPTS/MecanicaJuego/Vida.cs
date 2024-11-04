@@ -10,25 +10,27 @@ public class Vida : MonoBehaviour
     public Image BarraSalud;
     public Text TextoSalud;
 
+    // Agrega referencia al Animator para manejar animaciones
+    public Animator animator;
+
     private SkinnedMeshRenderer[] meshRenderers;
     private List<Color[]> originalColors = new List<Color[]>();
 
-    // Referencia al controlador del menú de muerte
     public MenuMuerteController menuMuerteController;
+
+    // Variables para indicar si fue atacado por un jefe o enemigo común
+    public bool muertePorJefe = false;
+    public bool muertePorEnemigo = false;
 
     void Start()
     {
-        // Asegúrate de que menuMuerteController esté asignado
         if (menuMuerteController == null)
         {
             Debug.LogError("MenuMuerteController no está asignado en el Inspector");
             return;
         }
 
-        // Obtener los SkinnedMeshRenderers del personaje
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
-
-        // Almacenar los colores originales de cada material
         foreach (var renderer in meshRenderers)
         {
             Color[] colors = new Color[renderer.materials.Length];
@@ -44,19 +46,38 @@ public class Vida : MonoBehaviour
     {
         ActualizarInterfaz();
 
-        // Notificar al MenuMuerteController cuando la salud llega a cero
         if (Salud <= 0 && menuMuerteController != null && !menuMuerteController.menuMuerte.activeSelf)
         {
-            Debug.Log("Activando el menú de muerte");
+            if (muertePorJefe)
+            {
+                animator.Play("JefeMeMata"); // Reproduce animación de muerte por jefe
+            }
+            else if (muertePorEnemigo)
+            {
+                animator.Play("EnemigosMeMata"); // Reproduce animación de muerte por enemigo
+            }
+
             menuMuerteController.ActivarMenuMuerte();
         }
     }
 
-    public void RecibirDaño(float daño)
+    public void RecibirDaño(float daño, bool esAtaqueJefe = false)
     {
         Salud -= daño;
         ActualizarInterfaz();
-        StartCoroutine(MostrarDaño()); // Efecto visual al recibir daño
+        StartCoroutine(MostrarDaño());
+
+        if (Salud <= 0)
+        {
+            if (esAtaqueJefe)
+            {
+                muertePorJefe = true;
+            }
+            else
+            {
+                muertePorEnemigo = true;
+            }
+        }
     }
 
     void ActualizarInterfaz()
