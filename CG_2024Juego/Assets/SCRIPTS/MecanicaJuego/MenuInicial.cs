@@ -9,25 +9,46 @@ public class MenuInicial : MonoBehaviour
 
     void Start()
     {
-        // Asegúrate de que el panel de controles esté desactivado al iniciar
         controlesPanel.SetActive(false);
     }
 
-    public void jugar()
+    // Método para cargar la escena usando el nombre
+    public void LoadSceneByName(string sceneName)
     {
-        // Cambia a la escena del juego
-        SceneManager.LoadScene("Mina");
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        // Verifica si la escena solicitada coincide con "Bosque-Limitado"
+        if (sceneName == "Bosque-Limitado" || SceneManager.GetActiveScene().name != sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+    // Método para cargar la escena usando el índice en Build Settings
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        if (Time.timeScale != 1f)
+        {
+            Time.timeScale = 1f;
+        }
+
+        // Verifica si el índice coincide con el de "Bosque-Limitado"
+        if (sceneIndex == 2 || SceneManager.GetActiveScene().buildIndex != sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 
     public void AbrirControles()
     {
-        // Abre el panel de controles cuando se presione el botón de controles
         controlesPanel.SetActive(true);
     }
 
     public void VolverAlMenu()
     {
-        // Cierra el panel de controles y vuelve al menú principal
         controlesPanel.SetActive(false);
     }
 }

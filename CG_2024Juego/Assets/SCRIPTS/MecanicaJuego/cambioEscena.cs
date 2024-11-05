@@ -6,22 +6,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class cambioEscena : MonoBehaviour
+public class CambioEscena : MonoBehaviour
 {
-    private Vector2 puntoInicial;  // Para recordar la posición inicial del objeto
-
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        puntoInicial = transform.position;  // Guardar la posición inicial
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        // Verifica si el objeto que colisiona tiene el tag "Player1"
+        if (other.CompareTag("Player1"))
         {
-            // Obtener el GameManager y guardar el progreso antes de cambiar de escena
-            GameManager.instance.SaveProgress();
-            SceneManager.LoadScene("Escena2");  // Cambiar a la siguiente escena
+            // Cambia a la escena con índice 0
+            SceneManager.LoadScene(0);
+        }
+        else if (other.CompareTag("Player2"))
+        {
+            // Cambia a la escena con índice 1
+            SceneManager.LoadScene(1);
         }
     }
 }
