@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +7,10 @@ public class VidaEnemigo : MonoBehaviour
     public float SaludMaxima = 100;
     public Image BarraSalud; // Arrastra aquí la imagen de la barra de salud
     public Text TextoSalud; // Arrastra aquí el texto de la salud
+    public GameObject muerteParticulasPrefab; // Prefab de partículas
 
     private Animator animator;
+    private PlayerScoreManager scoreManager;
 
     void Start()
     {
@@ -20,6 +21,13 @@ public class VidaEnemigo : MonoBehaviour
             Debug.LogError("Animator no encontrado en el objeto enemigo.");
         }
         ActualizarInterfaz();
+
+        // Encuentra el componente PlayerScoreManager en la escena
+        scoreManager = FindObjectOfType<PlayerScoreManager>();
+        if (scoreManager == null)
+        {
+            Debug.LogError("PlayerScoreManager no encontrado en la escena.");
+        }
     }
 
     public void RecibirDaño(float daño)
@@ -30,8 +38,7 @@ public class VidaEnemigo : MonoBehaviour
         if (Salud <= 0)
         {
             Salud = 0;
-            animator.Play("EnemigoMuere"); // Reemplaza con el nombre de la animación de muerte
-            DestruirEnemigo();
+            IniciarMuerte();
         }
     }
 
@@ -41,9 +48,29 @@ public class VidaEnemigo : MonoBehaviour
         TextoSalud.text = "+ " + Salud.ToString("f0");
     }
 
-    private void DestruirEnemigo()
+    private void IniciarMuerte()
     {
-        // Espera un poco antes de destruir al enemigo para ver la animación
+        // Instancia las partículas solo en el momento de la muerte
+        if (muerteParticulasPrefab != null)
+        {
+            GameObject particulas = Instantiate(muerteParticulasPrefab, transform.position, Quaternion.identity);
+            Destroy(particulas, 3f); // Destruye las partículas después de 3 segundos
+        }
+
+        // Llama al método de PlayerScoreManager para actualizar el contador
+        if (scoreManager != null)
+        {
+            if (CompareTag("Enemigo"))
+            {
+                scoreManager.EnemigoDerrotado();
+            }
+            else if (CompareTag("Jefe"))
+            {
+                scoreManager.JefeDerrotado();
+            }
+        }
+
+        // Destruye el enemigo después de un tiempo
         Destroy(gameObject, 1.5f); // Ajusta el tiempo según la duración de la animación
     }
 }

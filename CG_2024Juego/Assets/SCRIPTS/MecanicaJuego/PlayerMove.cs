@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     private bool isDead = false;
     private int punchToggle = 0;
     public float jumpHeight = 3;
+    public float punchSpeed = 1.5f; // Velocidad de la animación de puño
 
     void Update()
     {

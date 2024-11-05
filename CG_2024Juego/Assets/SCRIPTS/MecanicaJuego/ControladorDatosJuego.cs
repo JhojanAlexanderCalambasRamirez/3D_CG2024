@@ -13,7 +13,7 @@ public class ControladorDatosJuego : MonoBehaviour
     {
         // Usamos persistentDataPath en lugar de dataPath para guardar archivos
         archivoDeGuardado = Application.persistentDataPath + "/datosJuego.json";
-        jugador = GameObject.FindGameObjectWithTag("Player");
+        jugador = GameObject.FindGameObjectWithTag("Player1");
     }
 
     private void Update()
