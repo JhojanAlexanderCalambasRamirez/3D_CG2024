@@ -17,6 +17,7 @@ TagManager:
   - nombre1
   - Player2
   - Enemigo
+  - Jefe
   layers:
   - Default
   - TransparentFX
