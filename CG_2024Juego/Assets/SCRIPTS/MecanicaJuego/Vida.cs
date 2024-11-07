@@ -100,9 +100,17 @@ public class Vida : MonoBehaviour
 
     void ActualizarInterfaz()
     {
-        BarraSalud.fillAmount = Salud / SaludMaxima;
-        TextoSalud.text = "+ " + Salud.ToString("f0");
+        if (BarraSalud != null)
+        {
+            BarraSalud.fillAmount = Salud / SaludMaxima;
+        }
+
+        if (TextoSalud != null)
+        {
+            TextoSalud.text = "+ " + Salud.ToString("f0");
+        }
     }
+
 
     IEnumerator MostrarDaño()
     {
