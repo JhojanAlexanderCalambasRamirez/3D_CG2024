@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     private int punchToggle = 0;
     public float jumpHeight = 3;
     public float punchSpeed = 1.5f; // Velocidad de la animación de puño
+    public float fuerzaCaer = 10f; // Intensidad de la gravedad cuando cae
 
     void Update()
     {
@@ -44,10 +45,23 @@ public class PlayerMove : MonoBehaviour
 
         // Verifica si está en el suelo
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && rb.velocity.y <= 0)
+        {
+            animator.SetBool("IsFalling", false); // Cambia al estado en el suelo
+        }
+
         if (Input.GetKey("space") && isGrounded && !isDead)
         {
             animator.Play("Jump");
             Invoke("Jump", 0.1f);
+        }
+
+        // Aplica fuerza adicional hacia abajo cuando está en el aire
+        if (!isGrounded && rb.velocity.y < 0)
+        {
+            animator.SetBool("IsFalling", true);
+            rb.AddForce(Vector3.down * fuerzaCaer, ForceMode.Acceleration);
         }
 
         // Rodar/esquivar solo si tiene espada
