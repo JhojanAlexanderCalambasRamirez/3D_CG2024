@@ -7,11 +7,13 @@ public class PlayerScoreManager : MonoBehaviour
     public TextMeshProUGUI puntosAcumuladosEnemigoText;
     public TextMeshProUGUI jefesMatadosText;
     public TextMeshProUGUI itemsColeccionadosText;
+    public TextMeshProUGUI espadasElementalesText; // Nuevo TextMeshProUGUI para espadas elementales
 
     private int contadorEnemigos = 0;
     private int puntosAcumulados = 0;
     private int jefesMatados = 0;
     private int itemsColeccionados = 0;
+    private int espadasElementales = 0; // Nuevo contador para las espadas elementales
 
     // Método para actualizar la interfaz de usuario
     private void ActualizarUI()
@@ -20,6 +22,7 @@ public class PlayerScoreManager : MonoBehaviour
         puntosAcumuladosEnemigoText.text = puntosAcumulados.ToString();
         jefesMatadosText.text = jefesMatados.ToString();
         itemsColeccionadosText.text = itemsColeccionados.ToString();
+        espadasElementalesText.text = espadasElementales.ToString(); // Actualiza el contador de espadas elementales
     }
 
     // Método para llamar cuando un enemigo normal es derrotado
@@ -43,5 +46,22 @@ public class PlayerScoreManager : MonoBehaviour
     {
         itemsColeccionados++;
         ActualizarUI();
+    }
+
+    // Nuevo método para llamar cuando se recoge una espada elemental
+    public void EspadaRecogida()
+    {
+        espadasElementales++; // Incrementa el contador de espadas elementales
+        ActualizarUI();
+    }
+
+    // Método para detectar colisiones con objetos
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Sword"))
+        {
+            EspadaRecogida(); // Llama al método cuando colisiona con un objeto con el tag "Sword"
+            Destroy(other.gameObject); // Destruye la espada en la escena después de recogerla
+        }
     }
 }
