@@ -160812,21 +160812,12 @@ MonoBehaviour:
   - {fileID: 40231066}
   - {fileID: 7640892}
   - {fileID: 58056514}
-  slotImages:
-  - {fileID: 1999283138}
-  - {fileID: 522789816}
-  - {fileID: 325230688}
-  - {fileID: 325230688}
-  - {fileID: 761831533}
-  - {fileID: 645219924}
-  objectsInInventory:
-  - {fileID: 174477222}
-  - {fileID: 174477222}
-  - {fileID: 165920042}
-  - {fileID: 1219070877}
-  - {fileID: 1938208168}
-  - {fileID: 174477222}
+  cogerArmas: {fileID: 3953737054568292280}
   playerMove: {fileID: 3953737054568292278}
+  swordBasica: {fileID: 165920042}
+  swordRed: {fileID: 1219070877}
+  swordGreen: {fileID: 1938208168}
+  swordBlue: {fileID: 174477222}
 --- !u!1 &914869029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 105288, guid: 953345a209e4fe7428046236259c9c7f,

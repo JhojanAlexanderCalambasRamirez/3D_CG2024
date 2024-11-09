@@ -86,10 +86,10 @@ public class PlayerMove : MonoBehaviour
 
     public void OnInventorySlotChanged(int slotIndex)
     {
-        if (slotIndex >= 2 && slotIndex <= 5) // Slots de las espadas
+        if (slotIndex >= 3 && slotIndex <= 6) // Slots de las espadas
         {
             hasSword = true;
-            cogerArmas.ActivarArmar(slotIndex - 2); // Ajusta el índice si es necesario
+            cogerArmas.ActivarArmar(slotIndex - 3); // Ajusta el índice si es necesario
         }
         else
         {
