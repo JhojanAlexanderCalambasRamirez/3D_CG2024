@@ -3,21 +3,28 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Button[] slots; // Array de botones que representa los 6 slots del inventario
-    private int selectedSlot = -1; // Slot seleccionado (-1 significa que ninguno está seleccionado)
-    public CogerArmas cogerArmas; // Referencia al script que maneja las armas
-    public PlayerMove playerMove; // Referencia al script de movimiento del jugador
+    public Button[] slots;
+    private int selectedSlot = -1;
+    public CogerArmas cogerArmas;
+    public PlayerMove playerMove;
 
+    public GameObject swordBasica;
+    public GameObject swordRed;
+    public GameObject swordGreen;
+    public GameObject swordBlue;
 
-    // Asignación manual de espadas
-    private void Start()
+    private bool hasSwordBasica = false;
+    private bool hasSwordRed = false;
+    private bool hasSwordGreen = false;
+    private bool hasSwordBlue = false;
+
+    void Start()
     {
-        SelectSlot(0); // Seleccionar automáticamente el primer slot al iniciar
+        SelectSlot(0);
     }
 
     void Update()
     {
-        // Detección de teclas numéricas (1 a 6) para seleccionar el slot
         for (int i = 0; i < slots.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -28,52 +35,44 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Función para seleccionar un slot
     void SelectSlot(int index)
     {
         selectedSlot = index;
         UpdateSlotUI();
-        Debug.Log("Slot seleccionado: " + (index + 1)); // Muestra en la consola el slot seleccionado
+        Debug.Log("Slot seleccionado: " + (index + 1));
 
         if (index == 0)
         {
-            // Slot 1 seleccionado, desactivar todas las espadas
             cogerArmas.DesactivarArmas();
-            playerMove.OnInventorySlotChanged(0); // Actualizar animación en PlayerMove
+            playerMove.OnInventorySlotChanged(0);
         }
-        else if (index == 2)
+        else if (index == 3 && hasSwordBasica)
         {
-            // Slot 3: Sword_Basica
-            cogerArmas.ActivarArmar(0); // Activa Sword_Basica
-            playerMove.OnInventorySlotChanged(3);
+            cogerArmas.ActivarArmar(0);
+            playerMove.OnInventorySlotChanged(index);
         }
-        else if (index == 3)
+        else if (index == 4 && hasSwordRed)
         {
-            // Slot 4: Sword_Red
-            cogerArmas.ActivarArmar(1); // Activa Sword_Red
-            playerMove.OnInventorySlotChanged(4);
+            cogerArmas.ActivarArmar(1);
+            playerMove.OnInventorySlotChanged(index);
         }
-        else if (index == 4)
+        else if (index == 5 && hasSwordGreen)
         {
-            // Slot 5: Sword_Green
-            cogerArmas.ActivarArmar(2); // Activa Sword_Green
-            playerMove.OnInventorySlotChanged(5);
+            cogerArmas.ActivarArmar(2);
+            playerMove.OnInventorySlotChanged(index);
         }
-        else if (index == 5)
+        else if (index == 6 && hasSwordBlue)
         {
-            // Slot 6: Sword_Blue
-            cogerArmas.ActivarArmar(3); // Activa Sword_Blue
-            playerMove.OnInventorySlotChanged(6);
+            cogerArmas.ActivarArmar(3);
+            playerMove.OnInventorySlotChanged(index);
         }
         else
         {
-            // Otros slots que no son de armas
             cogerArmas.DesactivarArmas();
-            playerMove.OnInventorySlotChanged(index); // Actualizar animación en PlayerMove
+            playerMove.OnInventorySlotChanged(0);
         }
     }
 
-    // Actualiza la UI para mostrar el slot seleccionado
     void UpdateSlotUI()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -82,16 +81,36 @@ public class InventoryManager : MonoBehaviour
 
             if (i == selectedSlot)
             {
-                colors.normalColor = Color.yellow; // Cambia el color del slot seleccionado
-                slots[i].image.color = Color.white; // Imagen en el slot seleccionado en color normal
+                colors.normalColor = Color.yellow;
+                slots[i].image.color = Color.white;
             }
             else
             {
                 colors.normalColor = Color.white;
-                slots[i].image.color = new Color(1f, 1f, 1f, 0.3f); // Los demás slots en opacidad reducida
+                slots[i].image.color = new Color(1f, 1f, 1f, 0.3f);
             }
 
             slots[i].colors = colors;
         }
+    }
+
+    public void CollectSwordBasica()
+    {
+        hasSwordBasica = true;
+    }
+
+    public void CollectSwordRed()
+    {
+        hasSwordRed = true;
+    }
+
+    public void CollectSwordGreen()
+    {
+        hasSwordGreen = true;
+    }
+
+    public void CollectSwordBlue()
+    {
+        hasSwordBlue = true;
     }
 }

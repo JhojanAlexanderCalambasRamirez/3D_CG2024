@@ -1,40 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CogerArmas : MonoBehaviour
 {
-    public GameObject[] armas;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject[] armas; // Array de GameObjects de las armas en la mano
 
+    public void RecogerArma(int index)
+    {
+        armas[index].SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivarArmar(int index)
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            DesactivarArmas();
-        }
-    }
-
-    public void ActivarArmar(int numero)
-    {
-        for (int i = 0; i < armas.Length; i++)
-        {
-            armas[i].SetActive(false);
-        }
-
-        armas[numero].SetActive(true);
+        DesactivarArmas(); // Desactiva cualquier otra arma activa antes de activar la seleccionada
+        armas[index].SetActive(true);
     }
 
     public void DesactivarArmas()
     {
-        for (int i = 0; i < armas.Length; i++)
+        foreach (var arma in armas)
         {
-            armas[i].SetActive(false);
+            arma.SetActive(false);
         }
     }
 }
