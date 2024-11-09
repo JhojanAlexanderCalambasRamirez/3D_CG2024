@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Boladefuego : MonoBehaviour
 {
-
-    public float tiempoDeVida = 7f;  // Tiempo en segundos antes de que la bola de fuego se destruya
-
-    private void Start()
+    // Método para detectar la colisión física
+    void OnCollisionEnter(Collision collision)
     {
-        // Asegúrate de que solo la bola de fuego se destruya después del tiempo de vida
-        Debug.Log("Bola de fuego creada: " + gameObject.name);
-        Destroy(gameObject, tiempoDeVida);  // Se destruye solo esta bola
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("Bola de fuego destruida: " + gameObject.name);
+        // Verifica si la bola de fuego ha chocado con el jugador
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            // Destruye la bola de fuego al impactar con el jugador
+            Destroy(gameObject);
+        }
     }
 }

@@ -11,13 +11,14 @@ public class Brujo : MonoBehaviour
     public GameObject bolaDeFuegoPrefab; // Prefab de la bola de fuego
     public Transform spawnPoint;         // Punto de salida de la bola de fuego
     public float fuerzaDeDisparo = 10f;  // Fuerza con la que se lanza la bola de fuego
+    public float activationRange = 10.0f; // Distancia para activar al enemigo
 
     private Transform player;
     private Animator animator;
+    private bool isActivated = false;     // Indica si el enemigo ha sido activado
 
     void Start()
     {
-        // Encuentra al jugador por su tag
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player1");
         if (playerObj != null)
         {
@@ -28,32 +29,50 @@ public class Brujo : MonoBehaviour
             Debug.LogWarning("Player no encontrado en la escena.");
         }
 
-        // Obtén el componente Animator del enemigo
         animator = GetComponent<Animator>();
+        animator.SetTrigger("Idle"); // Comienza en animación Idle
     }
 
     void Update()
     {
         if (player != null)
         {
-            // Calcula la distancia entre el enemigo y el jugador
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-            // Si está dentro del rango de ataque, realiza la animación de ataque
-            if (distanceToPlayer <= attackRange)
+            // Activa al enemigo si el jugador está dentro del rango de activación
+            if (!isActivated && distanceToPlayer <= activationRange)
             {
-                // Activar la animación de ataque
-                animator.SetTrigger("Atacar");
+                isActivated = true;
+                animator.ResetTrigger("Idle"); // Quita Idle al activarse
+            }
+
+            // Lógica solo si el enemigo ha sido activado
+            if (isActivated)
+            {
+                if (distanceToPlayer <= attackRange)
+                {
+                    // En rango de ataque
+                    animator.SetTrigger("Atacar");
+                    animator.SetBool("isWalking", false);
+                }
+                else
+                {
+                    // Fuera de rango de ataque, pero dentro del rango de seguimiento
+                    animator.SetBool("isWalking", true);
+
+                    // Movimiento y rotación hacia el jugador
+                    Vector3 direction = (player.position - transform.position).normalized;
+                    transform.position += direction * speed * Time.deltaTime;
+
+                    Quaternion targetRotation = Quaternion.LookRotation(direction);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                }
             }
             else
             {
-                // Movimiento y rotación hacia el jugador
-                Vector3 direction = (player.position - transform.position).normalized;
-                transform.position += direction * speed * Time.deltaTime;
-
-                // Rotación hacia el jugador
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                // Si no está activado, mantener Idle
+                animator.SetTrigger("Idle");
+                animator.SetBool("isWalking", false);
             }
         }
     }
@@ -63,13 +82,8 @@ public class Brujo : MonoBehaviour
     {
         if (player == null) return;
 
-        // Instancia la bola de fuego en el punto de salida
         GameObject bolaDeFuego = Instantiate(bolaDeFuegoPrefab, spawnPoint.position, Quaternion.identity);
-
-        // Calcula la dirección hacia el jugador
         Vector3 direccion = (player.position - spawnPoint.position).normalized;
-
-        // Aplica la fuerza para lanzar la bola de fuego
         bolaDeFuego.GetComponent<Rigidbody>().AddForce(direccion * fuerzaDeDisparo, ForceMode.Impulse);
     }
 }
