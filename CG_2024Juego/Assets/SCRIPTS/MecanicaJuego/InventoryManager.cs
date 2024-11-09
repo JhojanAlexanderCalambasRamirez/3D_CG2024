@@ -4,17 +4,21 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public Button[] slots; // Array de botones que representa los 6 slots del inventario
+    public Image[] slotImages; // Array de imágenes en los slots
+    public GameObject[] objectsInInventory; // Objetos en el inventario
+    public PlayerMove playerMove; // Referencia al PlayerMove
+
     private int selectedSlot = -1; // Slot seleccionado (-1 significa que ninguno está seleccionado)
-    public CogerArmas cogerArmas;
+    private float inactiveOpacity = 0.5f; // Opacidad para los slots no seleccionados
 
     void Start()
     {
-        SelectSlot(0); // Seleccionar automáticamente el primer slot al iniciar
+        DeselectAllSlots();
+        UpdateSlotImages();
     }
 
     void Update()
     {
-        // Detección de teclas numéricas (1 a 6) para seleccionar el slot
         for (int i = 0; i < slots.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -25,31 +29,39 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Función para seleccionar un slot
     void SelectSlot(int index)
     {
         selectedSlot = index;
         UpdateSlotUI();
-        Debug.Log("Slot seleccionado: " + (index + 1)); // Muestra en la consola el slot seleccionado
+        Debug.Log("Slot seleccionado: " + (index + 1));
+        ActivateObjectInSlot(index);
 
-        if (index == 0)
-        {
-            // Slot 1 seleccionado, desactivar todas las espadas
-            cogerArmas.DesactivarArmas();
-        }
-        else if (index >= 3 && index <= 6)
-        {
-            // Activar espada específica en los slots 3 a 6
-            cogerArmas.ActivarArmar(index - 3);
-        }
-        else
-        {
-            // Otros slots que no son de armas
-            cogerArmas.DesactivarArmas();
-        }
+        // Notificar al PlayerMove sobre el cambio de slot
+        playerMove.OnInventorySlotChanged(selectedSlot);
     }
 
-    // Actualiza la UI para mostrar el slot seleccionado
+    void ActivateObjectInSlot(int slotIndex)
+    {
+        for (int i = 0; i < objectsInInventory.Length; i++)
+        {
+            if (objectsInInventory[i] != null)
+                objectsInInventory[i].SetActive(false);
+        }
+
+        if (slotIndex >= 0 && slotIndex < objectsInInventory.Length)
+        {
+            GameObject selectedObject = objectsInInventory[slotIndex];
+
+            if (selectedObject != null)
+            {
+                selectedObject.SetActive(true);
+                Debug.Log("Objeto activado: " + selectedObject.name);
+            }
+        }
+
+        UpdateSlotImages();
+    }
+
     void UpdateSlotUI()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -59,14 +71,40 @@ public class InventoryManager : MonoBehaviour
             if (i == selectedSlot)
             {
                 colors.normalColor = Color.yellow; // Cambia el color del slot seleccionado
-                slots[i].image.color = Color.white; // Imagen en el slot seleccionado en color normal
             }
             else
             {
-                colors.normalColor = Color.white;
-                slots[i].image.color = new Color(1f, 1f, 1f, 0.3f); // Los demás slots en opacidad reducida
+                colors.normalColor = Color.white; // Restaura el color de los slots no seleccionados
             }
 
+            slots[i].colors = colors;
+        }
+    }
+
+    void UpdateSlotImages()
+    {
+        for (int i = 0; i < slotImages.Length; i++)
+        {
+            if (objectsInInventory[i] != null)
+            {
+                Color color = slotImages[i].color;
+                color.a = (i == selectedSlot) ? 1f : inactiveOpacity;
+                slotImages[i].color = color;
+                slotImages[i].enabled = true;
+            }
+            else
+            {
+                slotImages[i].enabled = false;
+            }
+        }
+    }
+
+    void DeselectAllSlots()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            ColorBlock colors = slots[i].colors;
+            colors.normalColor = Color.white;
             slots[i].colors = colors;
         }
     }
