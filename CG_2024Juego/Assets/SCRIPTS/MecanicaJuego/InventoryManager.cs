@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        SelectSlot(0); // Seleccionar el primer slot (sin espada) al inicio
+        SelectSlot(0); // Seleccionar el primer slot (sin arma) al inicio
     }
 
     void Update()
@@ -38,11 +38,11 @@ public class InventoryManager : MonoBehaviour
         cogerArmas.DesactivarArmas();
         playerMove.OnInventorySlotChanged(0);
 
-        // Activar arma solo si el slot es válido y el jugador la ha recogido
-        if (index >= 3 && index <= 6)
+        // Activar arma solo si el slot es válido (3 a 6) y el jugador la ha recogido
+        if (index >= 2 && index <= 5) // Cambiar el rango de 3-6 a 2-5 para que funcione con SelectSlot(2) para Sword_Basica
         {
-            int armaIndex = index - 3; // Ajuste directo para asegurar que el índice corresponda con el slot
-            if (armaIndex >= 0 && armaIndex < armasRecogidas.Length && armasRecogidas[armaIndex])
+            int armaIndex = index - 2; // Cambiar a index - 2 para que corresponda correctamente
+            if (armasRecogidas[armaIndex]) // Verifica si el arma fue recogida
             {
                 cogerArmas.ActivarArmar(armaIndex);
                 playerMove.OnInventorySlotChanged(index);
@@ -75,24 +75,28 @@ public class InventoryManager : MonoBehaviour
     public void CollectSwordBasica()
     {
         armasRecogidas[0] = true;
-        SelectSlot(3); // Asignar Sword_Basica al slot 3 
+        SelectSlot(2); // Asignar Sword_Basica al slot 3 y cambiar a él
+        UpdateSlotUI(); // Asegura que se actualice la UI al momento de recoger
     }
 
     public void CollectSwordRed()
     {
         armasRecogidas[1] = true;
-        SelectSlot(4); // Asignar Sword_Red al slot 4 
+        SelectSlot(3); // Asignar Sword_Red al slot 4 y cambiar a él
+        UpdateSlotUI();
     }
 
     public void CollectSwordGreen()
     {
         armasRecogidas[2] = true;
-        SelectSlot(5); // Asignar Sword_Green al slot 5 
+        SelectSlot(4); // Asignar Sword_Green al slot 5 y cambiar a él
+        UpdateSlotUI();
     }
 
     public void CollectSwordBlue()
     {
         armasRecogidas[3] = true;
-        SelectSlot(6); // Asignar Sword_Blue al slot 6 
+        SelectSlot(5); // Asignar Sword_Blue al slot 6 y cambiar a él
+        UpdateSlotUI();
     }
 }
