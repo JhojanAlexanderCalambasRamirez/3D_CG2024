@@ -23,6 +23,8 @@ public class CogerArmas : MonoBehaviour
     public void RecogerArma(int index)
     {
         InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+
+        // Asignamos cada índice a la función de recolección adecuada sin ajustes adicionales
         switch (index)
         {
             case 0: inventoryManager.CollectSwordBasica(); break;
