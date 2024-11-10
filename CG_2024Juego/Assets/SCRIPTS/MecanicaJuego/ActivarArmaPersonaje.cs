@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ActivarArmaPersonaje : MonoBehaviour
@@ -25,7 +23,7 @@ public class ActivarArmaPersonaje : MonoBehaviour
         if (other.CompareTag("Player1") && cogerArmas != null)
         {
             cogerArmas.RecogerArma(numeroArma);  // Marca el arma como recogida en el inventario
-            Destroy(gameObject);  // Destruye el arma en el escenario después de recogerla
+            gameObject.SetActive(false); // Solo desactiva el arma en la escena
         }
     }
 }

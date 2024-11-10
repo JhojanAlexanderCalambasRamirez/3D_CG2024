@@ -1076,7 +1076,7 @@ GameObject:
   - component: {fileID: 7640892}
   m_Layer: 0
   m_Name: Slot5
-  m_TagString: Untagged
+  m_TagString: SaveSword_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6682,7 +6682,7 @@ GameObject:
   - component: {fileID: 40231066}
   m_Layer: 0
   m_Name: Slot4
-  m_TagString: Untagged
+  m_TagString: SaveSword_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9506,7 +9506,7 @@ GameObject:
   - component: {fileID: 58056514}
   m_Layer: 0
   m_Name: Slot6
-  m_TagString: Untagged
+  m_TagString: SaveSword_Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32401,7 +32401,7 @@ GameObject:
   - component: {fileID: 183787291}
   m_Layer: 0
   m_Name: Slot3
-  m_TagString: Untagged
+  m_TagString: SaveSword_Basica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379569,6 +379569,11 @@ PrefabInstance:
       propertyPath: cogerArmas
       value: 
       objectReference: {fileID: 3953737054568292280}
+    - target: {fileID: 4059102320918738306, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 914674587}
     - target: {fileID: 4897079033368084017, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: m_LocalPosition.x

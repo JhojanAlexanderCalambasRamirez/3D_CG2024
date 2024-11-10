@@ -2,24 +2,33 @@ using UnityEngine;
 
 public class CogerArmas : MonoBehaviour
 {
-    public GameObject[] armas; // Array de GameObjects de las armas en la mano
+    public GameObject[] armas; // Array de espadas en la escena (ordenadas en el mismo orden que en InventoryManager)
 
-    public void RecogerArma(int index)
+    public void DesactivarArmas()
     {
-        armas[index].SetActive(true);
+        foreach (GameObject arma in armas)
+        {
+            arma.SetActive(false);
+        }
     }
 
     public void ActivarArmar(int index)
     {
-        DesactivarArmas(); // Desactiva cualquier otra arma activa antes de activar la seleccionada
-        armas[index].SetActive(true);
+        if (index >= 0 && index < armas.Length)
+        {
+            armas[index].SetActive(true);
+        }
     }
 
-    public void DesactivarArmas()
+    public void RecogerArma(int index)
     {
-        foreach (var arma in armas)
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+        switch (index)
         {
-            arma.SetActive(false);
+            case 0: inventoryManager.CollectSwordBasica(); break;
+            case 1: inventoryManager.CollectSwordRed(); break;
+            case 2: inventoryManager.CollectSwordGreen(); break;
+            case 3: inventoryManager.CollectSwordBlue(); break;
         }
     }
 }

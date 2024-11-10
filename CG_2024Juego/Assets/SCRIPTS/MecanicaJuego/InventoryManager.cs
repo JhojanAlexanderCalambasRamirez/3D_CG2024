@@ -8,19 +8,12 @@ public class InventoryManager : MonoBehaviour
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
 
-    public GameObject swordBasica;
-    public GameObject swordRed;
-    public GameObject swordGreen;
-    public GameObject swordBlue;
-
-    private bool hasSwordBasica = false;
-    private bool hasSwordRed = false;
-    private bool hasSwordGreen = false;
-    private bool hasSwordBlue = false;
+    // Arreglo para verificar si cada espada ha sido recogida en su slot específico
+    private bool[] armasRecogidas = new bool[4]; // [Sword_Basica, Sword_Red, Sword_Green, Sword_Blue]
 
     void Start()
     {
-        SelectSlot(0);
+        SelectSlot(0); // Seleccionar el primer slot (sin espada) al inicio
     }
 
     void Update()
@@ -41,35 +34,20 @@ public class InventoryManager : MonoBehaviour
         UpdateSlotUI();
         Debug.Log("Slot seleccionado: " + (index + 1));
 
-        if (index == 0)
+        // Desactivar todas las armas primero
+        cogerArmas.DesactivarArmas();
+        playerMove.OnInventorySlotChanged(0);
+
+        // Verificar y activar el arma en el slot específico solo si ha sido recogida
+        if (index >= 3 && index <= 6)
         {
-            cogerArmas.DesactivarArmas();
-            playerMove.OnInventorySlotChanged(0);
-        }
-        else if (index == 3 && hasSwordBasica)
-        {
-            cogerArmas.ActivarArmar(0);
-            playerMove.OnInventorySlotChanged(index);
-        }
-        else if (index == 4 && hasSwordRed)
-        {
-            cogerArmas.ActivarArmar(1);
-            playerMove.OnInventorySlotChanged(index);
-        }
-        else if (index == 5 && hasSwordGreen)
-        {
-            cogerArmas.ActivarArmar(2);
-            playerMove.OnInventorySlotChanged(index);
-        }
-        else if (index == 6 && hasSwordBlue)
-        {
-            cogerArmas.ActivarArmar(3);
-            playerMove.OnInventorySlotChanged(index);
-        }
-        else
-        {
-            cogerArmas.DesactivarArmas();
-            playerMove.OnInventorySlotChanged(0);
+            // Ajustamos el índice para que coincida directamente con el slot y el arma recogida
+            int armaIndex = index - 3;
+            if (armasRecogidas[armaIndex])
+            {
+                cogerArmas.ActivarArmar(armaIndex);
+                playerMove.OnInventorySlotChanged(index);
+            }
         }
     }
 
@@ -94,23 +72,28 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    // Funciones para recoger cada espada y asignarla al slot correcto
     public void CollectSwordBasica()
     {
-        hasSwordBasica = true;
+        armasRecogidas[0] = true; // Slot 3
+        Debug.Log("Sword_Basica recogida y asignada al Slot 3");
     }
 
     public void CollectSwordRed()
     {
-        hasSwordRed = true;
+        armasRecogidas[1] = true; // Slot 4
+        Debug.Log("Sword_Red recogida y asignada al Slot 4");
     }
 
     public void CollectSwordGreen()
     {
-        hasSwordGreen = true;
+        armasRecogidas[2] = true; // Slot 5
+        Debug.Log("Sword_Green recogida y asignada al Slot 5");
     }
 
     public void CollectSwordBlue()
     {
-        hasSwordBlue = true;
+        armasRecogidas[3] = true; // Slot 6
+        Debug.Log("Sword_Blue recogida y asignada al Slot 6");
     }
 }
