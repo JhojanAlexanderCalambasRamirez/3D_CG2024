@@ -6,7 +6,8 @@ public class CorazonRojo : MonoBehaviour
 {
     public float CantidadCura;
     public float velocidadGiro = 100f;
-    public ParticleSystem curaEffect; 
+    public ParticleSystem curaEffect;
+    public AudioClip sonidoCura;
 
     private void Update()
     {
@@ -23,6 +24,11 @@ public class CorazonRojo : MonoBehaviour
             {
                 
                 Instantiate(curaEffect, transform.position, Quaternion.identity);
+            }
+
+            if (sonidoCura != null)
+            {
+                AudioSource.PlayClipAtPoint(sonidoCura, transform.position);
             }
 
             Destroy(gameObject);
