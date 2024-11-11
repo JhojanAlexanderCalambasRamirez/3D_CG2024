@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
+        SelectSlot(0); // Seleccionar el primer slot (sin arma) al inicio
         Debug.Log("Cantidad de slots: " + slots.Length);
 
         for (int i = 0; i < slots.Length; i++)
@@ -72,7 +73,7 @@ public class InventoryManager : MonoBehaviour
         playerMove.OnInventorySlotChanged(0);
 
         // Activar arma solo si el slot es uno de los slots asignados para espadas y el jugador la ha recogido
-        if (index >= 2 && index <= 5) // Validación para slots 3 a 6
+        if (index > 2 && index < 6) // Validación para slots 3 a 6
         {
             int armaIndex = index - 2; // Correspondencia del índice del slot con el índice de armas
             if (armasRecogidas[armaIndex]) // Verifica si el arma fue recogida
@@ -142,6 +143,11 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.Log("Asignando " + requiredTag + " al slot " + (slotIndex + 1));
             armasRecogidas[armaIndex] = true; // Marca el arma como recogida
+
+            // Selecciona el slot automáticamente al recoger la espada y muestra la animación
+            SelectSlot(slotIndex);
+            cogerArmas.ActivarArmar(armaIndex);
+            playerMove.OnInventorySlotChanged(slotIndex);
         }
     }
 }

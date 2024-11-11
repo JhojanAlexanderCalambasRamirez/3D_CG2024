@@ -86,10 +86,10 @@ public class PlayerMove : MonoBehaviour
 
     public void OnInventorySlotChanged(int slotIndex)
     {
-        if (slotIndex >= 3 && slotIndex < 3 + cogerArmas.armas.Length)
+        if (slotIndex >= 2 && slotIndex < 6)
         {
             hasSword = true;
-            cogerArmas.ActivarArmar(slotIndex - 3); // Ajusta el índice de arma
+            cogerArmas.ActivarArmar(slotIndex - 2); // Ajusta el índice de arma
         }
         else
         {
@@ -97,7 +97,6 @@ public class PlayerMove : MonoBehaviour
             cogerArmas.DesactivarArmas();
         }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
