@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,39 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        SelectSlot(0); // Seleccionar el primer slot (sin arma) al inicio
+        Debug.Log("Cantidad de slots: " + slots.Length);
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i] == null)
+            {
+                Debug.LogWarning("Slot " + (i + 1) + " es nulo.");
+            }
+            else
+            {
+                Debug.Log("Slot " + (i + 1) + " tiene tag: " + slots[i].tag);
+                // Validación de tags en cada slot
+                switch (i)
+                {
+                    case 2: // Slot 3 en index 2
+                        if (slots[i].tag != "SaveSword_Basica")
+                            Debug.LogWarning("El tag del slot 3 no coincide con SaveSword_Basica");
+                        break;
+                    case 3: // Slot 4 en index 3
+                        if (slots[i].tag != "SaveSword_Red")
+                            Debug.LogWarning("El tag del slot 4 no coincide con SaveSword_Red");
+                        break;
+                    case 4: // Slot 5 en index 4
+                        if (slots[i].tag != "SaveSword_Green")
+                            Debug.LogWarning("El tag del slot 5 no coincide con SaveSword_Green");
+                        break;
+                    case 5: // Slot 6 en index 5
+                        if (slots[i].tag != "SaveSword_Blue")
+                            Debug.LogWarning("El tag del slot 6 no coincide con SaveSword_Blue");
+                        break;
+                }
+            }
+        }
     }
 
     void Update()
@@ -38,10 +71,10 @@ public class InventoryManager : MonoBehaviour
         cogerArmas.DesactivarArmas();
         playerMove.OnInventorySlotChanged(0);
 
-        // Activar arma solo si el slot es válido (3 a 6) y el jugador la ha recogido
-        if (index >= 2 && index <= 5) // Cambiar el rango de 3-6 a 2-5 para que funcione con SelectSlot(2) para Sword_Basica
+        // Activar arma solo si el slot es uno de los slots asignados para espadas y el jugador la ha recogido
+        if (index >= 2 && index <= 5) // Validación para slots 3 a 6
         {
-            int armaIndex = index - 2; // Cambiar a index - 2 para que corresponda correctamente
+            int armaIndex = index - 2; // Correspondencia del índice del slot con el índice de armas
             if (armasRecogidas[armaIndex]) // Verifica si el arma fue recogida
             {
                 cogerArmas.ActivarArmar(armaIndex);
@@ -71,32 +104,44 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Funciones para recoger cada espada y asignarlas al slot correspondiente
+    // Funciones para recoger cada espada y asignarlas al slot correspondiente solo si el tag coincide
     public void CollectSwordBasica()
     {
-        armasRecogidas[0] = true;
-        SelectSlot(2); // Asignar Sword_Basica al slot 3 y cambiar a él
-        UpdateSlotUI(); // Asegura que se actualice la UI al momento de recoger
+        AssignSwordToSlot("SaveSword_Basica", 2, 0); // Tag, SlotIndex, ArmaIndex
     }
 
     public void CollectSwordRed()
     {
-        armasRecogidas[1] = true;
-        SelectSlot(3); // Asignar Sword_Red al slot 4 y cambiar a él
-        UpdateSlotUI();
+        AssignSwordToSlot("SaveSword_Red", 3, 1);
     }
 
     public void CollectSwordGreen()
     {
-        armasRecogidas[2] = true;
-        SelectSlot(4); // Asignar Sword_Green al slot 5 y cambiar a él
-        UpdateSlotUI();
+        AssignSwordToSlot("SaveSword_Green", 4, 2);
     }
 
     public void CollectSwordBlue()
     {
-        armasRecogidas[3] = true;
-        SelectSlot(5); // Asignar Sword_Blue al slot 6 y cambiar a él
-        UpdateSlotUI();
+        AssignSwordToSlot("SaveSword_Blue", 5, 3);
+    }
+
+    // Método para asignar la espada al slot correcto si el tag coincide
+    void AssignSwordToSlot(string requiredTag, int slotIndex, int armaIndex)
+    {
+        if (slotIndex < 0 || slotIndex >= slots.Length)
+        {
+            Debug.LogWarning("El índice " + slotIndex + " está fuera de los límites del array.");
+            return;
+        }
+
+        if (slots[slotIndex].tag != requiredTag)
+        {
+            Debug.LogWarning("El tag del slot " + (slotIndex + 1) + " no coincide con " + requiredTag);
+        }
+        else
+        {
+            Debug.Log("Asignando " + requiredTag + " al slot " + (slotIndex + 1));
+            armasRecogidas[armaIndex] = true; // Marca el arma como recogida
+        }
     }
 }

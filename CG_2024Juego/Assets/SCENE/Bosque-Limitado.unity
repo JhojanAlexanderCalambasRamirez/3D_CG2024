@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 7640893}
   - component: {fileID: 7640892}
   m_Layer: 0
-  m_Name: Slot5
+  m_Name: SaveSword_Green
   m_TagString: SaveSword_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6681,7 +6681,7 @@ GameObject:
   - component: {fileID: 40231067}
   - component: {fileID: 40231066}
   m_Layer: 0
-  m_Name: Slot4
+  m_Name: SaveSword_Red
   m_TagString: SaveSword_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9505,7 +9505,7 @@ GameObject:
   - component: {fileID: 58056515}
   - component: {fileID: 58056514}
   m_Layer: 0
-  m_Name: Slot6
+  m_Name: SaveSword_Blue
   m_TagString: SaveSword_Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32400,7 +32400,7 @@ GameObject:
   - component: {fileID: 183787292}
   - component: {fileID: 183787291}
   m_Layer: 0
-  m_Name: Slot3
+  m_Name: SaveSword_Basica
   m_TagString: SaveSword_Basica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77926,7 +77926,7 @@ PrefabInstance:
     - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5160565039037400035, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
@@ -114314,7 +114314,7 @@ PrefabInstance:
     - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -160812,10 +160812,6 @@ MonoBehaviour:
   - {fileID: 58056514}
   cogerArmas: {fileID: 3953737054568292280}
   playerMove: {fileID: 3953737054568292278}
-  swordBasica: {fileID: 1134188556}
-  swordRed: {fileID: 126366640}
-  swordGreen: {fileID: 850093936}
-  swordBlue: {fileID: 1460968998}
 --- !u!1 &914869029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 105288, guid: 953345a209e4fe7428046236259c9c7f,
@@ -188616,7 +188612,7 @@ PrefabInstance:
     - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245059,6 +245055,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 488602, guid: f39758d3d915d104080c0e3321b8c75b,
     type: 3}
   m_PrefabInstance: {fileID: 2068763168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407904279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3170322617698426132, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 9206173595298401690}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408095338 stripped
 GameObject:
@@ -361508,6 +361510,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1408095342}
   m_SourcePrefab: {fileID: 100100000, guid: fa96530a2d3d74a4796598aa6fdfecb2, type: 3}
+--- !u!1 &2053972134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5884332002644202847, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 9206173595298401690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054312329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 156190, guid: 3d04a236527d27045b4b6ce3b2a7b0aa,
@@ -370007,7 +370015,7 @@ PrefabInstance:
     - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6928664654367594148, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
@@ -379544,6 +379552,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 172466757096231479, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: armas.Array.data[0]
+      value: 
+      objectReference: {fileID: 1407904279}
+    - target: {fileID: 172466757096231479, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: armas.Array.data[1]
+      value: 
+      objectReference: {fileID: 2053972134}
     - target: {fileID: 2504756492011277143, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: BarraSalud
