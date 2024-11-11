@@ -1075,8 +1075,8 @@ GameObject:
   - component: {fileID: 7640893}
   - component: {fileID: 7640892}
   m_Layer: 0
-  m_Name: Slot5
-  m_TagString: Untagged
+  m_Name: SaveSword_Green
+  m_TagString: SaveSword_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6681,8 +6681,8 @@ GameObject:
   - component: {fileID: 40231067}
   - component: {fileID: 40231066}
   m_Layer: 0
-  m_Name: Slot4
-  m_TagString: Untagged
+  m_Name: SaveSword_Red
+  m_TagString: SaveSword_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9505,8 +9505,8 @@ GameObject:
   - component: {fileID: 58056515}
   - component: {fileID: 58056514}
   m_Layer: 0
-  m_Name: Slot6
-  m_TagString: Untagged
+  m_Name: SaveSword_Blue
+  m_TagString: SaveSword_Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20879,7 +20879,7 @@ PrefabInstance:
     - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Red (2)
+      value: Sword_Red
       objectReference: {fileID: 0}
     - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
@@ -21008,7 +21008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 1
 --- !u!1001 &127047875
 PrefabInstance:
@@ -29166,12 +29166,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 776898465}
   m_SourcePrefab: {fileID: 100100000, guid: 74e94f0416ca474418749ee6c97439b2, type: 3}
---- !u!1 &165920042 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1082589083}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &165955168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30429,12 +30423,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &174477222 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
-    type: 3}
-  m_PrefabInstance: {fileID: 2097425634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &174501715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 468664, guid: 5d0e2f3c9733ad24c8a19d2e89ac5add,
@@ -32412,8 +32400,8 @@ GameObject:
   - component: {fileID: 183787292}
   - component: {fileID: 183787291}
   m_Layer: 0
-  m_Name: Slot3
-  m_TagString: Untagged
+  m_Name: SaveSword_Basica
+  m_TagString: SaveSword_Basica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41496,7 +41484,7 @@ PrefabInstance:
     - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Green (1)
+      value: 'Sword_Green '
       objectReference: {fileID: 0}
     - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
         type: 3}
@@ -41539,7 +41527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 2
 --- !u!65 &233268238
 BoxCollider:
@@ -77935,6 +77923,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5160565039037400035, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -114318,6 +114311,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148947,7 +148945,7 @@ PrefabInstance:
     - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Green (2)
+      value: Sword_Green
       objectReference: {fileID: 0}
     - target: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
         type: 3}
@@ -149011,7 +149009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 2
 --- !u!1001 &850784182
 PrefabInstance:
@@ -151085,7 +151083,7 @@ PrefabInstance:
     - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Red (1)
+      value: Sword_Red
       objectReference: {fileID: 0}
     - target: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
         type: 3}
@@ -151193,7 +151191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 1
 --- !u!65 &858010553
 BoxCollider:
@@ -160812,20 +160810,7 @@ MonoBehaviour:
   - {fileID: 40231066}
   - {fileID: 7640892}
   - {fileID: 58056514}
-  slotImages:
-  - {fileID: 1999283138}
-  - {fileID: 522789816}
-  - {fileID: 325230688}
-  - {fileID: 325230688}
-  - {fileID: 761831533}
-  - {fileID: 645219924}
-  objectsInInventory:
-  - {fileID: 174477222}
-  - {fileID: 174477222}
-  - {fileID: 165920042}
-  - {fileID: 1219070877}
-  - {fileID: 1938208168}
-  - {fileID: 174477222}
+  cogerArmas: {fileID: 3953737054568292280}
   playerMove: {fileID: 3953737054568292278}
 --- !u!1 &914869029 stripped
 GameObject:
@@ -188624,6 +188609,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword_Basica
       objectReference: {fileID: 0}
+    - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -198066,7 +198056,7 @@ PrefabInstance:
     - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Basica (2)
+      value: Sword_Basica
       objectReference: {fileID: 0}
     - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
         type: 3}
@@ -198130,7 +198120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 0
 --- !u!1001 &1134483671
 PrefabInstance:
@@ -211521,12 +211511,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 881518319}
   m_SourcePrefab: {fileID: 100100000, guid: 5296e314f038d5946b1e87c49325871e, type: 3}
---- !u!1 &1219070877 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
-    type: 3}
-  m_PrefabInstance: {fileID: 447152872}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219279355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 174938, guid: 33d2396704f502c40bd674b135e08461,
@@ -222993,7 +222977,7 @@ PrefabInstance:
     - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Blue (1)
+      value: Sword_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
@@ -223101,7 +223085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 3
 --- !u!65 &1283940345
 BoxCollider:
@@ -245072,6 +245056,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2068763168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407904279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3170322617698426132, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 9206173595298401690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408095338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 150372, guid: fa96530a2d3d74a4796598aa6fdfecb2,
@@ -254214,7 +254204,7 @@ PrefabInstance:
     - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Blue (2)
+      value: 'Sword_Blue '
       objectReference: {fileID: 0}
     - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
@@ -254343,7 +254333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 3
 --- !u!1001 &1461050813
 PrefabInstance:
@@ -342327,12 +342317,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1938208168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
-    type: 3}
-  m_PrefabInstance: {fileID: 642879986}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938572648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 116360, guid: ab34233292d193c47948f094a12fc6c7,
@@ -361526,6 +361510,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1408095342}
   m_SourcePrefab: {fileID: 100100000, guid: fa96530a2d3d74a4796598aa6fdfecb2, type: 3}
+--- !u!1 &2053972134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5884332002644202847, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 9206173595298401690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054312329 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 156190, guid: 3d04a236527d27045b4b6ce3b2a7b0aa,
@@ -367288,7 +367278,7 @@ PrefabInstance:
     - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
         type: 3}
       propertyPath: m_Name
-      value: Sword_Basica (1)
+      value: Sword_Basica
       objectReference: {fileID: 0}
     - target: {fileID: 8866919463184751839, guid: 606a15118aedae248aaefb023dc11d9f,
         type: 3}
@@ -367331,7 +367321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adcf5aedd6fb6ce4fa177e5bfa8d3e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 3953737054568292280}
   numeroArma: 0
 --- !u!65 &2083729052
 BoxCollider:
@@ -370021,6 +370011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6245261586943517373, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6928664654367594148, guid: 9c243b29e0ecd7545bae104cfcf4ea39,
         type: 3}
@@ -379557,6 +379552,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 172466757096231479, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: armas.Array.data[0]
+      value: 
+      objectReference: {fileID: 1407904279}
+    - target: {fileID: 172466757096231479, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: armas.Array.data[1]
+      value: 
+      objectReference: {fileID: 2053972134}
     - target: {fileID: 2504756492011277143, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: BarraSalud
@@ -379572,11 +379577,21 @@ PrefabInstance:
       propertyPath: menuMuerteController
       value: 
       objectReference: {fileID: 1735342601}
+    - target: {fileID: 3170322617698426132, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4059102320918738306, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: cogerArmas
       value: 
       objectReference: {fileID: 3953737054568292280}
+    - target: {fileID: 4059102320918738306, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 914674587}
     - target: {fileID: 4897079033368084017, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: m_LocalPosition.x

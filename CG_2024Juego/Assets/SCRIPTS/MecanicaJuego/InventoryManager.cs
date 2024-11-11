@@ -1,24 +1,57 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Button[] slots; // Array de botones que representa los 6 slots del inventario
-    public Image[] slotImages; // Array de imágenes en los slots
-    public GameObject[] objectsInInventory; // Objetos en el inventario
-    public PlayerMove playerMove; // Referencia al PlayerMove
+    public Button[] slots; // Array de botones de slots de inventario
+    private int selectedSlot = -1;
+    public CogerArmas cogerArmas;
+    public PlayerMove playerMove;
 
-    private int selectedSlot = -1; // Slot seleccionado (-1 significa que ninguno está seleccionado)
-    private float inactiveOpacity = 0.5f; // Opacidad para los slots no seleccionados
+    // Flags para determinar si cada espada ha sido recogida
+    private bool[] armasRecogidas = new bool[4]; // [Sword_Basica, Sword_Red, Sword_Green, Sword_Blue]
 
     void Start()
     {
-        DeselectAllSlots();
-        UpdateSlotImages();
+        Debug.Log("Cantidad de slots: " + slots.Length);
+
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i] == null)
+            {
+                Debug.LogWarning("Slot " + (i + 1) + " es nulo.");
+            }
+            else
+            {
+                Debug.Log("Slot " + (i + 1) + " tiene tag: " + slots[i].tag);
+                // Validación de tags en cada slot
+                switch (i)
+                {
+                    case 2: // Slot 3 en index 2
+                        if (slots[i].tag != "SaveSword_Basica")
+                            Debug.LogWarning("El tag del slot 3 no coincide con SaveSword_Basica");
+                        break;
+                    case 3: // Slot 4 en index 3
+                        if (slots[i].tag != "SaveSword_Red")
+                            Debug.LogWarning("El tag del slot 4 no coincide con SaveSword_Red");
+                        break;
+                    case 4: // Slot 5 en index 4
+                        if (slots[i].tag != "SaveSword_Green")
+                            Debug.LogWarning("El tag del slot 5 no coincide con SaveSword_Green");
+                        break;
+                    case 5: // Slot 6 en index 5
+                        if (slots[i].tag != "SaveSword_Blue")
+                            Debug.LogWarning("El tag del slot 6 no coincide con SaveSword_Blue");
+                        break;
+                }
+            }
+        }
     }
 
     void Update()
     {
+        // Detectar teclas 1, 2, 3, etc. para seleccionar el slot correspondiente
         for (int i = 0; i < slots.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -33,33 +66,21 @@ public class InventoryManager : MonoBehaviour
     {
         selectedSlot = index;
         UpdateSlotUI();
-        Debug.Log("Slot seleccionado: " + (index + 1));
-        ActivateObjectInSlot(index);
 
-        // Notificar al PlayerMove sobre el cambio de slot
-        playerMove.OnInventorySlotChanged(selectedSlot);
-    }
+        // Desactivar todas las armas antes de activar la seleccionada
+        cogerArmas.DesactivarArmas();
+        playerMove.OnInventorySlotChanged(0);
 
-    void ActivateObjectInSlot(int slotIndex)
-    {
-        for (int i = 0; i < objectsInInventory.Length; i++)
+        // Activar arma solo si el slot es uno de los slots asignados para espadas y el jugador la ha recogido
+        if (index >= 2 && index <= 5) // Validación para slots 3 a 6
         {
-            if (objectsInInventory[i] != null)
-                objectsInInventory[i].SetActive(false);
-        }
-
-        if (slotIndex >= 0 && slotIndex < objectsInInventory.Length)
-        {
-            GameObject selectedObject = objectsInInventory[slotIndex];
-
-            if (selectedObject != null)
+            int armaIndex = index - 2; // Correspondencia del índice del slot con el índice de armas
+            if (armasRecogidas[armaIndex]) // Verifica si el arma fue recogida
             {
-                selectedObject.SetActive(true);
-                Debug.Log("Objeto activado: " + selectedObject.name);
+                cogerArmas.ActivarArmar(armaIndex);
+                playerMove.OnInventorySlotChanged(index);
             }
         }
-
-        UpdateSlotImages();
     }
 
     void UpdateSlotUI()
@@ -70,42 +91,57 @@ public class InventoryManager : MonoBehaviour
 
             if (i == selectedSlot)
             {
-                colors.normalColor = Color.yellow; // Cambia el color del slot seleccionado
+                colors.normalColor = Color.yellow;
+                slots[i].image.color = Color.white;
             }
             else
             {
-                colors.normalColor = Color.white; // Restaura el color de los slots no seleccionados
+                colors.normalColor = Color.white;
+                slots[i].image.color = new Color(1f, 1f, 1f, 0.3f);
             }
 
             slots[i].colors = colors;
         }
     }
 
-    void UpdateSlotImages()
+    // Funciones para recoger cada espada y asignarlas al slot correspondiente solo si el tag coincide
+    public void CollectSwordBasica()
     {
-        for (int i = 0; i < slotImages.Length; i++)
-        {
-            if (objectsInInventory[i] != null)
-            {
-                Color color = slotImages[i].color;
-                color.a = (i == selectedSlot) ? 1f : inactiveOpacity;
-                slotImages[i].color = color;
-                slotImages[i].enabled = true;
-            }
-            else
-            {
-                slotImages[i].enabled = false;
-            }
-        }
+        AssignSwordToSlot("SaveSword_Basica", 2, 0); // Tag, SlotIndex, ArmaIndex
     }
 
-    void DeselectAllSlots()
+    public void CollectSwordRed()
     {
-        for (int i = 0; i < slots.Length; i++)
+        AssignSwordToSlot("SaveSword_Red", 3, 1);
+    }
+
+    public void CollectSwordGreen()
+    {
+        AssignSwordToSlot("SaveSword_Green", 4, 2);
+    }
+
+    public void CollectSwordBlue()
+    {
+        AssignSwordToSlot("SaveSword_Blue", 5, 3);
+    }
+
+    // Método para asignar la espada al slot correcto si el tag coincide
+    void AssignSwordToSlot(string requiredTag, int slotIndex, int armaIndex)
+    {
+        if (slotIndex < 0 || slotIndex >= slots.Length)
         {
-            ColorBlock colors = slots[i].colors;
-            colors.normalColor = Color.white;
-            slots[i].colors = colors;
+            Debug.LogWarning("El índice " + slotIndex + " está fuera de los límites del array.");
+            return;
+        }
+
+        if (slots[slotIndex].tag != requiredTag)
+        {
+            Debug.LogWarning("El tag del slot " + (slotIndex + 1) + " no coincide con " + requiredTag);
+        }
+        else
+        {
+            Debug.Log("Asignando " + requiredTag + " al slot " + (slotIndex + 1));
+            armasRecogidas[armaIndex] = true; // Marca el arma como recogida
         }
     }
 }

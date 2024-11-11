@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float groundDistance = 0.1f;
     public LayerMask groundMask;
     public Vida vida;
-    public CogerArmas cogerArmas; // Referencia a CogerArmas
+    public CogerArmas cogerArmas;
 
     private float x, y;
     private bool isGrounded;
@@ -86,10 +86,10 @@ public class PlayerMove : MonoBehaviour
 
     public void OnInventorySlotChanged(int slotIndex)
     {
-        if (slotIndex >= 2 && slotIndex <= 5) // Slots de las espadas
+        if (slotIndex >= 3 && slotIndex < 3 + cogerArmas.armas.Length)
         {
             hasSword = true;
-            cogerArmas.ActivarArmar(slotIndex - 2); // Ajusta el índice si es necesario
+            cogerArmas.ActivarArmar(slotIndex - 3); // Ajusta el índice de arma
         }
         else
         {
@@ -97,6 +97,7 @@ public class PlayerMove : MonoBehaviour
             cogerArmas.DesactivarArmas();
         }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
