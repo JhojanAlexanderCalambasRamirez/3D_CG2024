@@ -61,6 +61,15 @@ public class Vida : MonoBehaviour
         }
     }
 
+    public void RecibirCura(float cura)
+    {
+        Salud += cura;
+
+        if(Salud > SaludMaxima)
+        {
+            Salud = SaludMaxima ;
+        }
+    }
     public void RecibirDaño(float daño, bool esAtaqueJefe = false)
     {
         Salud -= daño;
