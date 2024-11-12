@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -11,15 +13,19 @@ public class PlayerMove : MonoBehaviour
     public LayerMask groundMask;
     public Vida vida;
     public CogerArmas cogerArmas;
+    public int dañoPuño = 10;
 
     private float x, y;
     private bool isGrounded;
     private bool hasSword = false;
     private bool isDead = false;
     private int punchToggle = 0;
+    private bool isAttacking = false;
+    private VidaEnemigo enemigoActual;   // Referencia al enemigo actual
     public float jumpHeight = 3;
     public float punchSpeed = 1.5f;
     public float fuerzaCaer = 10f;
+    private int selectedWeaponIndex = -1;
 
     void Update()
     {
@@ -54,17 +60,33 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(Vector3.down * fuerzaCaer, ForceMode.Acceleration);
         }
 
-        if (Input.GetKeyDown("q") && hasSword)
-            animator.Play("Esquivar/Rodar");
-
-        if (Input.GetKeyDown("e"))
+        // Animación de ataque sin necesidad de estar cerca de un enemigo
+        if (Input.GetKeyDown("e") && !isAttacking)
         {
+            isAttacking = true;
             if (hasSword)
+            {
                 animator.Play("AtaqueEspada");
+                AtacarConEspada();
+            }
             else
+            {
                 animator.Play(punchToggle == 0 ? "Puño1" : "Puño2");
+                if (enemigoActual != null)
+                {
+                    enemigoActual.RecibirDaño(dañoPuño);
+                    Debug.Log("Ataque con puño: " + dañoPuño + " de daño aplicado al enemigo.");
+                }
+            }
 
             punchToggle = 1 - punchToggle;
+        }
+
+        // Restablecer el estado de ataque si la animación ha terminado
+        if (isAttacking && !animator.GetCurrentAnimatorStateInfo(0).IsName("AtaqueEspada") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Puño1") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Puño2"))
+        {
+            isAttacking = false;
+            
         }
 
         if (Input.GetKeyDown("k"))
@@ -89,12 +111,31 @@ public class PlayerMove : MonoBehaviour
         if (slotIndex >= 2 && slotIndex < 6)
         {
             hasSword = true;
-            cogerArmas.ActivarArmar(slotIndex - 2); // Ajusta el índice de arma
+            selectedWeaponIndex = slotIndex - 2;
+            cogerArmas.ActivarArmar(selectedWeaponIndex);
         }
         else
         {
             hasSword = false;
+            selectedWeaponIndex = -1;
             cogerArmas.DesactivarArmas();
+        }
+    }
+
+    private void AtacarConEspada()
+    {
+        int daño = hasSword && selectedWeaponIndex >= 0 ?
+            cogerArmas.ObtenerDañoArma(selectedWeaponIndex) :
+            cogerArmas.ObtenerDañoPuño();
+
+        if (enemigoActual != null)
+        {
+            enemigoActual.RecibirDaño(daño);
+            Debug.Log("Ataque con " + (hasSword ? "espada" : "puño") + ": " + daño + " de daño aplicado");
+        }
+        else
+        {
+            Debug.Log("No se encontró enemigo en rango para atacar.");
         }
     }
 
@@ -105,6 +146,20 @@ public class PlayerMove : MonoBehaviour
             hasSword = true;
             animator.Play("EquiparEspada");
             Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Enemigo"))
+        {
+            enemigoActual = other.GetComponent<VidaEnemigo>();
+            Debug.Log("En rango de ataque con el enemigo.");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Enemigo"))
+        {
+            enemigoActual = null;
+            Debug.Log("Fuera de rango de ataque con el enemigo.");
         }
     }
 }
