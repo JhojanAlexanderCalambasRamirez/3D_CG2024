@@ -1,40 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CogerArmas : MonoBehaviour
 {
-    public GameObject[] armas;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            DesactivarArmas();
-        }
-    }
-
-    public void ActivarArmar(int numero)
-    {
-        for (int i = 0; i < armas.Length; i++)
-        {
-            armas[i].SetActive(false);
-        }
-
-        armas[numero].SetActive(true);
-    }
+    public GameObject[] armas; // Array de espadas en la escena (ordenadas en el mismo orden que en InventoryManager)
 
     public void DesactivarArmas()
     {
-        for (int i = 0; i < armas.Length; i++)
+        foreach (GameObject arma in armas)
         {
-            armas[i].SetActive(false);
+            arma.SetActive(false);
+        }
+    }
+
+    public void ActivarArmar(int index)
+    {
+        if (index >= 0 && index < armas.Length)
+        {
+            armas[index].SetActive(true);
+        }
+    }
+
+    public void RecogerArma(int index)
+    {
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+
+        // Asignamos cada índice a la función de recolección adecuada sin ajustes adicionales
+        switch (index)
+        {
+            case 0: inventoryManager.CollectSwordBasica(); break;
+            case 1: inventoryManager.CollectSwordRed(); break;
+            case 2: inventoryManager.CollectSwordGreen(); break;
+            case 3: inventoryManager.CollectSwordBlue(); break;
         }
     }
 }

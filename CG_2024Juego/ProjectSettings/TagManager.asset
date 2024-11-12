@@ -19,6 +19,10 @@ TagManager:
   - Enemigo
   - Jefe
   - Sword
+  - SaveSword_Basica
+  - SaveSword_Red
+  - SaveSword_Green
+  - SaveSword_Blue
   layers:
   - Default
   - TransparentFX

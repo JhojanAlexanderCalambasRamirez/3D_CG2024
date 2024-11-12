@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float groundDistance = 0.1f;
     public LayerMask groundMask;
     public Vida vida;
+    public CogerArmas cogerArmas;
 
     private float x, y;
     private bool isGrounded;
@@ -17,8 +18,8 @@ public class PlayerMove : MonoBehaviour
     private bool isDead = false;
     private int punchToggle = 0;
     public float jumpHeight = 3;
-    public float punchSpeed = 1.5f; // Velocidad de la animación de puño
-    public float fuerzaCaer = 10f; // Intensidad de la gravedad cuando cae
+    public float punchSpeed = 1.5f;
+    public float fuerzaCaer = 10f;
 
     void Update()
     {
@@ -30,26 +31,16 @@ public class PlayerMove : MonoBehaviour
         transform.Rotate(0, x * Time.deltaTime * rotationSpeed, 0);
         transform.Translate(0, 0, y * Time.deltaTime * runSpeed);
 
-        // Cambia la animación de movimiento en función de si tiene una espada o no
         bool isMoving = x != 0 || y != 0;
-        if (hasSword)
-        {
-            animator.SetBool("IsMovingWithSword", isMoving);
-        }
-        else
-        {
-            animator.SetBool("Other", isMoving);
-            animator.SetFloat("VelX", x);
-            animator.SetFloat("VelY", y);
-        }
+        animator.SetBool("IsMovingWithSword", hasSword && isMoving);
+        animator.SetBool("Other", !hasSword && isMoving);
+        animator.SetFloat("VelX", x);
+        animator.SetFloat("VelY", y);
 
-        // Verifica si está en el suelo
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && rb.velocity.y <= 0)
-        {
-            animator.SetBool("IsFalling", false); // Cambia al estado en el suelo
-        }
+            animator.SetBool("IsFalling", false);
 
         if (Input.GetKey("space") && isGrounded && !isDead)
         {
@@ -57,42 +48,33 @@ public class PlayerMove : MonoBehaviour
             Invoke("Jump", 0.1f);
         }
 
-        // Aplica fuerza adicional hacia abajo cuando está en el aire
         if (!isGrounded && rb.velocity.y < 0)
         {
             animator.SetBool("IsFalling", true);
             rb.AddForce(Vector3.down * fuerzaCaer, ForceMode.Acceleration);
         }
 
-        // Rodar/esquivar solo si tiene espada
         if (Input.GetKeyDown("q") && hasSword)
-        {
             animator.Play("Esquivar/Rodar");
-        }
 
-        // Ataques con y sin espada
         if (Input.GetKeyDown("e"))
         {
             if (hasSword)
-            {
                 animator.Play("AtaqueEspada");
-            }
             else
-            {
                 animator.Play(punchToggle == 0 ? "Puño1" : "Puño2");
-                punchToggle = 1 - punchToggle;
-            }
+
+            punchToggle = 1 - punchToggle;
         }
 
-        // Simulación de daño para pruebas
-        if (Input.GetKeyDown("k"))  // Daño de enemigo
+        if (Input.GetKeyDown("k"))
         {
-            vida.RecibirDaño(vida.Salud, false); // Muerte por enemigo
+            vida.RecibirDaño(vida.Salud, false);
             isDead = true;
         }
-        else if (Input.GetKeyDown("l"))  // Daño de jefe
+        else if (Input.GetKeyDown("l"))
         {
-            vida.RecibirDaño(vida.Salud, true); // Muerte por jefe
+            vida.RecibirDaño(vida.Salud, true);
             isDead = true;
         }
     }
@@ -102,13 +84,27 @@ public class PlayerMove : MonoBehaviour
         rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
     }
 
+    public void OnInventorySlotChanged(int slotIndex)
+    {
+        if (slotIndex >= 2 && slotIndex < 6)
+        {
+            hasSword = true;
+            cogerArmas.ActivarArmar(slotIndex - 2); // Ajusta el índice de arma
+        }
+        else
+        {
+            hasSword = false;
+            cogerArmas.DesactivarArmas();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sword"))
         {
-            hasSword = true; // Activa la espada
-            animator.Play("EquiparEspada"); // Reproduce la animación de equipar espada
-            Destroy(other.gameObject); // Destruye la espada en la escena después de recogerla
+            hasSword = true;
+            animator.Play("EquiparEspada");
+            Destroy(other.gameObject);
         }
     }
 }

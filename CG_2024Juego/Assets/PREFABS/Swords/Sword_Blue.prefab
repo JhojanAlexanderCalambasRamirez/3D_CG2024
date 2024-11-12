@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2936350957583659212}
   - component: {fileID: 3324624664747246674}
   m_Layer: 0
-  m_Name: Sword7_Blue
+  m_Name: Sword_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6928664654367594148
 Transform:
   m_ObjectHideFlags: 0
