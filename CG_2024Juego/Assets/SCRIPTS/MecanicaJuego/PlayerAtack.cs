@@ -1,42 +1,85 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float daño = 20f; // Daño que se le hará al enemigo
-    public float tiempoEntreAtaques = 1.0f; // Tiempo de espera entre ataques en segundos
-    public string tagEnemigo = "Enemigo"; // Tag que identifica a los enemigos
+    public int dañoPuño = 20;
+    public int dañoSword_Basica = 30;
+    public int dañoSword_Red = 35;
+    public int dañoSword_Green = 40;
+    public int dañoSword_Blue = 45;
+    public float tiempoEntreAtaques = 0.5f;
+    public string tagEnemigo = "Enemigo";
 
-    private VidaEnemigo enemigoActual; // Referencia al enemigo actual que se está atacando
-    private float tiempoSiguienteAtaque = 0f; // Tiempo en el que se puede atacar de nuevo
+    private float tiempoProximoAtaque;
+    private bool hasSword = false;
+    private int selectedWeaponIndex = -1;
 
-    void Update()
+    private CogerArmas cogerArmas;
+
+    private void Start()
     {
-        // Verifica si el jugador presiona la tecla "E" y si ya pasó el tiempo de espera
-        if (Input.GetKeyDown(KeyCode.E) && enemigoActual != null && Time.time >= tiempoSiguienteAtaque)
+        cogerArmas = GetComponent<CogerArmas>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1") && Time.time >= tiempoProximoAtaque)
         {
-            // Realiza el ataque y actualiza el tiempo para el próximo ataque
-            enemigoActual.RecibirDaño(daño);
-            tiempoSiguienteAtaque = Time.time + tiempoEntreAtaques;
+            tiempoProximoAtaque = Time.time + tiempoEntreAtaques;
+            Atacar();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Atacar()
     {
-        // Si el objeto con el que colisionamos tiene el tag de enemigo, lo guardamos
-        if (other.CompareTag(tagEnemigo))
+        int daño = hasSword ? ObtenerDañoArma(selectedWeaponIndex) : dañoPuño;
+        Debug.Log("Ataque con arma, daño aplicado: " + daño);
+
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
         {
-            enemigoActual = other.GetComponent<VidaEnemigo>();
+            if (hit.transform.CompareTag(tagEnemigo))
+            {
+                // Cambiar a la clase 'Vida' en lugar de 'HealthManager'
+                Vida enemigo = hit.transform.GetComponent<Vida>();
+                if (enemigo != null)
+                {
+                    enemigo.RecibirDaño(daño);
+                }
+            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnInventorySlotChanged(int slotIndex)
     {
-        // Si el jugador sale del área de colisión con el enemigo, reseteamos la referencia
-        if (other.CompareTag(tagEnemigo))
+        if (slotIndex >= 2 && slotIndex < 6)
         {
-            enemigoActual = null;
+            hasSword = true;
+            selectedWeaponIndex = slotIndex - 2; // Ajuste de índice para armas
+            cogerArmas.ActivarArmar(selectedWeaponIndex);
+            Debug.Log("Arma seleccionada: " + selectedWeaponIndex);
         }
+        else
+        {
+            hasSword = false;
+            selectedWeaponIndex = -1;
+            cogerArmas.DesactivarArmas();
+            Debug.Log("Sin arma seleccionada");
+        }
+    }
+
+    private int ObtenerDañoArma(int index)
+    {
+        int daño = 0;
+        switch (index)
+        {
+            case 0: daño = dañoSword_Basica; break;
+            case 1: daño = dañoSword_Red; break;
+            case 2: daño = dañoSword_Green; break;
+            case 3: daño = dañoSword_Blue; break;
+            default: daño = dañoPuño; break;
+        }
+        Debug.Log("Daño calculado para el arma " + index + ": " + daño);
+        return daño;
     }
 }
