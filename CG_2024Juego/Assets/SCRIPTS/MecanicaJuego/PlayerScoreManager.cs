@@ -63,5 +63,10 @@ public class PlayerScoreManager : MonoBehaviour
             EspadaRecogida(); // Llama al método cuando colisiona con un objeto con el tag "Sword"
             Destroy(other.gameObject); // Destruye la espada en la escena después de recogerla
         }
+        else if (other.CompareTag("Items"))
+        {
+            ItemRecogido(); // Llama al método cuando colisiona con un objeto con el tag "Items"
+            Destroy(other.gameObject); // Destruye el ítem en la escena después de recogerlo
+        }
     }
 }
