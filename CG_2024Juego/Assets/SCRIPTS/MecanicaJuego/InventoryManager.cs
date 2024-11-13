@@ -7,12 +7,12 @@ public class InventoryManager : MonoBehaviour
 {
     public Button[] slots;
     public TextMeshProUGUI nombreObjetoSlot;  // Referencia al TextMeshPro para mostrar el nombre del objeto
-    private int selectedSlot = -1;
+    public int selectedSlot = -1;
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
     public MisionesManager misionesManager;
 
-    private bool[] armasRecogidas = new bool[4];
+    public bool[] armasRecogidas = new bool[4];
 
     void Start()
     {
@@ -62,7 +62,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    void SelectSlot(int index)
+    public void SelectSlot(int index)
     {
         selectedSlot = index;
         UpdateSlotUI();

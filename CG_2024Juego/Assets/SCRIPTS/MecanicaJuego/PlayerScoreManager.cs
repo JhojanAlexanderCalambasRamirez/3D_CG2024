@@ -9,14 +9,14 @@ public class PlayerScoreManager : MonoBehaviour
     public TextMeshProUGUI itemsColeccionadosText;
     public TextMeshProUGUI espadasElementalesText; // Nuevo TextMeshProUGUI para espadas elementales
 
-    private int contadorEnemigos = 0;
-    private int puntosAcumulados = 0;
-    private int jefesMatados = 0;
-    private int itemsColeccionados = 0;
-    private int espadasElementales = 0; // Nuevo contador para las espadas elementales
+    public int contadorEnemigos = 0;
+    public int puntosAcumulados = 0;
+    public int jefesMatados = 0;
+    public int itemsColeccionados = 0;
+    public int espadasElementales = 0; // Nuevo contador para las espadas elementales
 
     // Método para actualizar la interfaz de usuario
-    private void ActualizarUI()
+    public void ActualizarUI()
     {
         contadorEnemigosText.text = contadorEnemigos.ToString();
         puntosAcumuladosEnemigoText.text = puntosAcumulados.ToString();
@@ -56,7 +56,7 @@ public class PlayerScoreManager : MonoBehaviour
     }
 
     // Método para detectar colisiones con objetos
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sword"))
         {
