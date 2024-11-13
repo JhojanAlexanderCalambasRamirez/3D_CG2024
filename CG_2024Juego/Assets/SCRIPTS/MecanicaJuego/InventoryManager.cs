@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
     public Button[] slots;
+    public TextMeshProUGUI nombreObjetoSlot;  // Referencia al TextMeshPro para mostrar el nombre del objeto
     private int selectedSlot = -1;
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
@@ -66,6 +68,30 @@ public class InventoryManager : MonoBehaviour
 
         cogerArmas.DesactivarArmas();
         playerMove.OnInventorySlotChanged(0);
+
+        // Establecer el nombre del objeto en el TextMeshPro
+        switch (index)
+        {
+            case 0:
+            case 1:
+                nombreObjetoSlot.text = "Puños";
+                break;
+            case 2:
+                nombreObjetoSlot.text = "Espada Básica";
+                break;
+            case 3:
+                nombreObjetoSlot.text = "Espada Roja";
+                break;
+            case 4:
+                nombreObjetoSlot.text = "Espada Verde";
+                break;
+            case 5:
+                nombreObjetoSlot.text = "Espada Azul";
+                break;
+            default:
+                nombreObjetoSlot.text = "";  // Para slots no asignados
+                break;
+        }
 
         if (index > 1 && index < 6)
         {
