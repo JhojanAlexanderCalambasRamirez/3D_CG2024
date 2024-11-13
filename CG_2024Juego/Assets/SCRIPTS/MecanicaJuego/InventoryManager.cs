@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     private int selectedSlot = -1;
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
+    public MisionesManager misionesManager;
 
     private bool[] armasRecogidas = new bool[4];
 
@@ -143,6 +144,9 @@ public class InventoryManager : MonoBehaviour
     public void CollectSwordBlue()
     {
         AssignSwordToSlot("SaveSword_Blue", 5, 3);
+
+        // Llama a CompletarMision en el MisionesManager para completar la misión
+        misionesManager.CompletarMision("Sword_Blue");
     }
 
     void AssignSwordToSlot(string requiredTag, int slotIndex, int armaIndex)

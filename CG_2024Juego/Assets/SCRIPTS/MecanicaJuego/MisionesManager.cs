@@ -9,7 +9,7 @@ public class MisionesManager : MonoBehaviour
     public Button botonCerrarPanel;            // Botón para cerrar el panel de misiones
     public Button[] botonesMisiones;           // Botones para iniciar las misiones
     public Slider[] slidersMisiones;           // Sliders para mostrar el progreso de las misiones
-    public TextMeshProUGUI[] textosMisiones;   // Textos para mostrar el contexto de las misiones
+    public TextMeshProUGUI numeroMisionText;   // Texto para mostrar el número de misión activa
 
     private bool[] misionesCompletadas = new bool[4]; // Estado de cada misión
     private int misionActiva = -1;                    // Índice de la misión activa (-1 si no hay ninguna activa)
@@ -18,6 +18,9 @@ public class MisionesManager : MonoBehaviour
     {
         // Asegurarse de que el panel esté cerrado al inicio
         panelMisiones.SetActive(false);
+
+        // Inicializar el texto del número de misión
+        numeroMisionText.text = "-";
 
         // Agregar listeners a los botones
         botonAbrirPanel.onClick.AddListener(AbrirPanel);
@@ -30,7 +33,6 @@ public class MisionesManager : MonoBehaviour
             botonesMisiones[i].onClick.AddListener(() => IniciarMision(index));
 
             // Inicializar el estado visual de los sliders
-            slidersMisiones[i].gameObject.SetActive(true);  // Mostrar sliders al inicio
             slidersMisiones[i].value = misionesCompletadas[i] ? 1 : 0;  // Mostrar progreso de misiones completadas
             slidersMisiones[i].fillRect.GetComponent<Image>().color = misionesCompletadas[i] ? Color.green : Color.red;  // Color verde si está completa
         }
@@ -48,11 +50,15 @@ public class MisionesManager : MonoBehaviour
 
     void IniciarMision(int index)
     {
-        if (misionesCompletadas[index] || misionActiva != -1) return;  // Evitar reiniciar misión completada o iniciar otra mientras una esté activa
+        if (misionesCompletadas[index]) return;  // Evitar iniciar una misión ya completada
 
+        // Actualizar misión activa y los elementos visuales
         misionActiva = index;
         slidersMisiones[index].value = 0;  // Resetear el progreso de la misión
         slidersMisiones[index].fillRect.GetComponent<Image>().color = Color.red;  // Cambiar el color a rojo para misión en progreso
+
+        // Actualizar el texto del número de misión
+        numeroMisionText.text = $"Misión {index + 1}";
 
         // Desactivar todos los botones de misión excepto el activo
         for (int i = 0; i < botonesMisiones.Length; i++)
@@ -86,10 +92,13 @@ public class MisionesManager : MonoBehaviour
 
         if (misionCompletada)
         {
-            // Marcar misión como completada visualmente y en el estado
+            // Marcar misión como completada visualmente
             slidersMisiones[misionActiva].value = 1;  // Llenar el slider al 100%
             slidersMisiones[misionActiva].fillRect.GetComponent<Image>().color = Color.green;  // Cambiar el color a verde
             misionesCompletadas[misionActiva] = true;
+
+            // Restablecer el texto del número de misión
+            numeroMisionText.text = "-";
             misionActiva = -1;  // No hay misión activa actualmente
 
             // Reactivar botones para las misiones incompletas
@@ -98,6 +107,14 @@ public class MisionesManager : MonoBehaviour
                 if (!misionesCompletadas[i])  // Solo misiones incompletas son reactivables
                     botonesMisiones[i].interactable = true;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Sword"))
+        {
+            CompletarMision(other.name);  // Llamar CompletarMision pasando el nombre de la espada con la que se colisiona
         }
     }
 }
