@@ -47,7 +47,7 @@ public class PlayerMove : MonoBehaviour
             missionButtons[i].onClick.AddListener(() => StartMission(index));
         }
     }
-
+        
     void Update()
     {
         if (isDead) return;
