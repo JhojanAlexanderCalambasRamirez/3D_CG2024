@@ -5,25 +5,44 @@ using UnityEngine;
 public class Daño : MonoBehaviour
 {
     public float cantidadDaño = 2f;  // Cantidad de daño que hará al jugador
+    public float intervaloDaño = 1f; // Intervalo de tiempo entre cada aplicación de daño
 
-    // Este método se activa cuando otro objeto con trigger entra en el collider
+    private bool enContactoConJugador = false;
+    private Vida vidaJugador;
+    private float tiempoSiguienteDaño = 0f;
+
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el objeto con el que colisiona tiene el tag "Player"
         if (other.CompareTag("Player1"))
         {
             // Obtiene el componente Vida del jugador
-            Vida vidaJugador = other.GetComponent<Vida>();
+            vidaJugador = other.GetComponent<Vida>();
 
-            // Si el jugador tiene el componente Vida, aplica el daño
             if (vidaJugador != null)
             {
-                vidaJugador.RecibirDaño(cantidadDaño);
+                enContactoConJugador = true;
             }
             else
             {
                 Debug.LogWarning("El jugador no tiene un componente de Vida.");
             }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (enContactoConJugador && Time.time >= tiempoSiguienteDaño)
+        {
+            vidaJugador.RecibirDaño(cantidadDaño);
+            tiempoSiguienteDaño = Time.time + intervaloDaño; // Define el próximo momento para aplicar daño
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player1"))
+        {
+            enContactoConJugador = false; // Detiene el daño cuando el jugador sale del trigger
         }
     }
 }

@@ -25,6 +25,7 @@ TagManager:
   - SaveSword_Blue
   - Ground
   - Items
+  - Teletransporte
   layers:
   - Default
   - TransparentFX
