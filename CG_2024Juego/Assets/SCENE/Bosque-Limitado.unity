@@ -15154,6 +15154,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 3953737054568292288}
+    - target: {fileID: 3297585028319644284, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: activationRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297585028319644284, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: deactivationRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
       propertyPath: m_Name
