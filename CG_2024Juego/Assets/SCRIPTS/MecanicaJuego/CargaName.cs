@@ -19,7 +19,7 @@ public class CargaName : MonoBehaviour
         {
             // Obtenemos el componente TMP_Text y asignamos el texto guardado en PlayerPrefs
             nombreText = nombre1.GetComponent<TMP_Text>();
-            nombreText.text = PlayerPrefs.GetString("nombre1", "Rojo"); // Usamos la clave "nombre1"
+            nombreText.text = PlayerPrefs.GetString("nombre1", " "); // Usamos la clave "nombre1"
         }
         else
         {

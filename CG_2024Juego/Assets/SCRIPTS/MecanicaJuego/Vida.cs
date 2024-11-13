@@ -120,6 +120,13 @@ public class Vida : MonoBehaviour
         }
     }
 
+    // Al morir el jugador
+    public void RegistrarMuerte()
+    {
+        int muertes = PlayerPrefs.GetInt("muertesJugador", 0) + 1;
+        PlayerPrefs.SetInt("muertesJugador", muertes);
+    }
+
 
     IEnumerator MostrarDaño()
     {
