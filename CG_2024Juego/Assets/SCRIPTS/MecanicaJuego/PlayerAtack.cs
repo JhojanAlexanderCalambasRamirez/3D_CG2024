@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
     private void Atacar()
     {
         int daño = hasSword ? ObtenerDañoArma(selectedWeaponIndex) : dañoPuño;
-        Debug.Log("Ataque con arma, daño aplicado: " + daño);
+        Debug.Log("Ataque con puño, daño aplicado: " + daño);
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
