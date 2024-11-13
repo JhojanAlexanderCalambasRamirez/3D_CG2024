@@ -55,6 +55,7 @@ public class Brujo : MonoBehaviour
                     animator.SetTrigger("Atacar");
                     animator.SetBool("isWalking", false);
                 }
+            
                 else
                 {
                     // Fuera de rango de ataque, pero dentro del rango de seguimiento

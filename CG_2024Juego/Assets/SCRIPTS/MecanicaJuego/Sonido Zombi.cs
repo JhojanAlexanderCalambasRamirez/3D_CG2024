@@ -4,8 +4,8 @@ public class SonidoZombi : MonoBehaviour
 {
     public AudioSource fuenteAudio;
     public Transform player;  // Asigna el Transform del jugador en el Inspector
-    public float distanciaActivacion = 0.05f; // 5 cm
-    public float distanciaDesactivacion = 0.08f; // 8 cm
+    public float distanciaActivacion = 2f; 
+    public float distanciaDesactivacion = 2f; 
     private bool sonidoActivo = false;
 
     void Start()

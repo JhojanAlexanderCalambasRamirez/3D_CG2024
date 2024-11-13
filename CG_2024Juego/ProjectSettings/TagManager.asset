@@ -24,6 +24,7 @@ TagManager:
   - SaveSword_Green
   - SaveSword_Blue
   - Ground
+  - Items
   layers:
   - Default
   - TransparentFX
