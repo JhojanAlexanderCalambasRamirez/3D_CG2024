@@ -29454,6 +29454,11 @@ PrefabInstance:
       propertyPath: menuMuerteController
       value: 
       objectReference: {fileID: 1947468746}
+    - target: {fileID: 4401470221864362656, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
+        type: 3}
+      propertyPath: m_CustomSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: 656058fe318eb48558d21d66d1a79a2b, type: 2}
     - target: {fileID: 4897079033368084017, guid: 1d2cbc4a1e20b104284fe71ef453e8f1,
         type: 3}
       propertyPath: m_LocalPosition.x

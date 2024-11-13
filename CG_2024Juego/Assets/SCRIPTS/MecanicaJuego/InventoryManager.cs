@@ -1,20 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Button[] slots; // Array de botones de slots de inventario
+    public Button[] slots;
+    public TextMeshProUGUI nombreObjetoSlot;  // Referencia al TextMeshPro para mostrar el nombre del objeto
     private int selectedSlot = -1;
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
+    public MisionesManager misionesManager;
 
-    // Flags para determinar si cada espada ha sido recogida
-    private bool[] armasRecogidas = new bool[4]; // [Sword_Basica, Sword_Red, Sword_Green, Sword_Blue]
+    private bool[] armasRecogidas = new bool[4];
 
     void Start()
     {
-        Debug.Log("Cantidad de slots: " + slots.Length);
+        SelectSlot(0);
 
         for (int i = 0; i < slots.Length; i++)
         {
@@ -25,22 +27,21 @@ public class InventoryManager : MonoBehaviour
             else
             {
                 Debug.Log("Slot " + (i + 1) + " tiene tag: " + slots[i].tag);
-                // Validación de tags en cada slot
                 switch (i)
                 {
-                    case 2: // Slot 3 en index 2
+                    case 2:
                         if (slots[i].tag != "SaveSword_Basica")
                             Debug.LogWarning("El tag del slot 3 no coincide con SaveSword_Basica");
                         break;
-                    case 3: // Slot 4 en index 3
+                    case 3:
                         if (slots[i].tag != "SaveSword_Red")
                             Debug.LogWarning("El tag del slot 4 no coincide con SaveSword_Red");
                         break;
-                    case 4: // Slot 5 en index 4
+                    case 4:
                         if (slots[i].tag != "SaveSword_Green")
                             Debug.LogWarning("El tag del slot 5 no coincide con SaveSword_Green");
                         break;
-                    case 5: // Slot 6 en index 5
+                    case 5:
                         if (slots[i].tag != "SaveSword_Blue")
                             Debug.LogWarning("El tag del slot 6 no coincide con SaveSword_Blue");
                         break;
@@ -51,7 +52,6 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        // Detectar teclas 1, 2, 3, etc. para seleccionar el slot correspondiente
         for (int i = 0; i < slots.Length; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + i))
@@ -67,15 +67,37 @@ public class InventoryManager : MonoBehaviour
         selectedSlot = index;
         UpdateSlotUI();
 
-        // Desactivar todas las armas antes de activar la seleccionada
         cogerArmas.DesactivarArmas();
         playerMove.OnInventorySlotChanged(0);
 
-        // Activar arma solo si el slot es uno de los slots asignados para espadas y el jugador la ha recogido
-        if (index >= 2 && index <= 5) // Validación para slots 3 a 6
+        // Establecer el nombre del objeto en el TextMeshPro
+        switch (index)
         {
-            int armaIndex = index - 2; // Correspondencia del índice del slot con el índice de armas
-            if (armasRecogidas[armaIndex]) // Verifica si el arma fue recogida
+            case 0:
+            case 1:
+                nombreObjetoSlot.text = "Puños";
+                break;
+            case 2:
+                nombreObjetoSlot.text = "Espada Básica";
+                break;
+            case 3:
+                nombreObjetoSlot.text = "Espada Roja";
+                break;
+            case 4:
+                nombreObjetoSlot.text = "Espada Verde";
+                break;
+            case 5:
+                nombreObjetoSlot.text = "Espada Azul";
+                break;
+            default:
+                nombreObjetoSlot.text = "";  // Para slots no asignados
+                break;
+        }
+
+        if (index > 1 && index < 6)
+        {
+            int armaIndex = index - 2;
+            if (armasRecogidas[armaIndex])
             {
                 cogerArmas.ActivarArmar(armaIndex);
                 playerMove.OnInventorySlotChanged(index);
@@ -104,10 +126,9 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Funciones para recoger cada espada y asignarlas al slot correspondiente solo si el tag coincide
     public void CollectSwordBasica()
     {
-        AssignSwordToSlot("SaveSword_Basica", 2, 0); // Tag, SlotIndex, ArmaIndex
+        AssignSwordToSlot("SaveSword_Basica", 2, 0);
     }
 
     public void CollectSwordRed()
@@ -123,9 +144,11 @@ public class InventoryManager : MonoBehaviour
     public void CollectSwordBlue()
     {
         AssignSwordToSlot("SaveSword_Blue", 5, 3);
+
+        // Llama a CompletarMision en el MisionesManager para completar la misión
+        misionesManager.CompletarMision("Sword_Blue");
     }
 
-    // Método para asignar la espada al slot correcto si el tag coincide
     void AssignSwordToSlot(string requiredTag, int slotIndex, int armaIndex)
     {
         if (slotIndex < 0 || slotIndex >= slots.Length)
@@ -141,7 +164,11 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Debug.Log("Asignando " + requiredTag + " al slot " + (slotIndex + 1));
-            armasRecogidas[armaIndex] = true; // Marca el arma como recogida
+            armasRecogidas[armaIndex] = true;
+
+            SelectSlot(slotIndex);
+            cogerArmas.ActivarArmar(armaIndex);
+            playerMove.OnInventorySlotChanged(slotIndex);
         }
     }
 }
