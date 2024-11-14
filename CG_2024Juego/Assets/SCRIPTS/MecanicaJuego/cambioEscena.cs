@@ -1,45 +1,40 @@
-// Alexander Calambas - 2190555
-// Juan Manuel Santos - 2215928
-// Juan David Rios - 2225674
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
-    private static int contadorColisiones = 0; // Variable estática para que el contador se mantenga entre escenas
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player1"))
+        if (other.CompareTag("Player1") && GameManager.Instance != null)
         {
-            contadorColisiones++; // Incrementa el contador en cada colisión
+            GameManager.Instance.contadorColisiones++;
+            Debug.Log("Contador de colisiones: " + GameManager.Instance.contadorColisiones);
 
             // Cambia de escena según el valor del contador
-            switch (contadorColisiones)
+            switch (GameManager.Instance.contadorColisiones)
             {
-                case 1: // Primera colisión, carga la escena Mina
+                case 1:
                     SceneManager.LoadScene(1);
                     break;
-                case 2: // Segunda colisión, carga la escena MenuPrincipal
+                case 2:
                     SceneManager.LoadScene(0);
                     break;
-                case 3: // Tercera colisión, carga la escena DemoRed
+                case 3:
                     SceneManager.LoadScene(4);
                     break;
-                case 4: // Cuarta colisión, carga la escena Bosque
+                case 4:
                     SceneManager.LoadScene(2);
                     break;
-                case 5: // Quinta colisión, carga la escena DemoGreen
+                case 5:
                     SceneManager.LoadScene(5);
                     break;
-                case 6: // Sexta colisión, carga la escena Bosque
+                case 6:
                     SceneManager.LoadScene(2);
                     break;
-                case 7: // Séptima colisión, carga la escena DemoBlue
+                case 7:
                     SceneManager.LoadScene(6);
                     break;
-                case 8: // Octava colisión, carga la escena Creditos/Final
+                case 8:
                     SceneManager.LoadScene(7);
                     break;
             }

@@ -8,6 +8,7 @@ public class MenuInicial : MonoBehaviour
     void Start()
     {
         controlesPanel.SetActive(false);
+
     }
 
     // Método para cargar la escena usando el nombre

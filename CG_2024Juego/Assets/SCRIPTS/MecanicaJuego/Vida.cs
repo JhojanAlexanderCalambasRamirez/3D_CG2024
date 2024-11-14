@@ -10,7 +10,6 @@ public class Vida : MonoBehaviour
     public Image BarraSalud;
     public Text TextoSalud;
 
-    // Agrega referencia al Animator para manejar animaciones
     public Animator animator;
 
     private SkinnedMeshRenderer[] meshRenderers;
@@ -18,7 +17,6 @@ public class Vida : MonoBehaviour
 
     public MenuMuerteController menuMuerteController;
 
-    // Variables para indicar si fue atacado por un jefe o enemigo común
     public bool muertePorJefe = false;
     public bool muertePorEnemigo = false;
 
@@ -28,6 +26,18 @@ public class Vida : MonoBehaviour
         {
             Debug.LogError("MenuMuerteController no está asignado en el Inspector");
             return;
+        }
+
+        // Cargar el valor de salud desde PlayerPrefs si existe
+        if (PlayerPrefs.HasKey("SaludPersistente"))
+        {
+            Salud = PlayerPrefs.GetFloat("SaludPersistente");
+        }
+
+        // Limitar la salud al valor máximo
+        if (Salud > SaludMaxima)
+        {
+            Salud = SaludMaxima;
         }
 
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
@@ -50,11 +60,11 @@ public class Vida : MonoBehaviour
         {
             if (muertePorJefe)
             {
-                animator.Play("JefeMeMata"); // Reproduce animación de muerte por jefe
+                animator.Play("JefeMeMata");
             }
             else if (muertePorEnemigo)
             {
-                animator.Play("EnemigosMeMata"); // Reproduce animación de muerte por enemigo
+                animator.Play("EnemigosMeMata");
             }
 
             menuMuerteController.ActivarMenuMuerte();
@@ -64,12 +74,13 @@ public class Vida : MonoBehaviour
     public void RecibirCura(float cura)
     {
         Salud += cura;
-
-        if(Salud > SaludMaxima)
+        if (Salud > SaludMaxima)
         {
-            Salud = SaludMaxima ;
+            Salud = SaludMaxima;
         }
+        GuardarSalud();
     }
+
     public void RecibirDaño(float daño, bool esAtaqueJefe = false)
     {
         Salud -= daño;
@@ -87,25 +98,23 @@ public class Vida : MonoBehaviour
                 animator.Play("EnemigosMeMata");
             }
 
-            // Llama a la función OnDeath después de la animación
             StartCoroutine(OnDeath());
         }
+
+        GuardarSalud();
     }
 
     private IEnumerator OnDeath()
     {
-        // Esperar hasta que la animación de muerte esté activa
         while (!animator.GetCurrentAnimatorStateInfo(0).IsName("JefeMeMata") && !animator.GetCurrentAnimatorStateInfo(0).IsName("EnemigosMeMata"))
         {
             yield return null;
         }
 
-        // Esperar la duración de la animación de muerte
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         menuMuerteController.ActivarMenuMuerte();
     }
-
 
     void ActualizarInterfaz()
     {
@@ -120,6 +129,11 @@ public class Vida : MonoBehaviour
         }
     }
 
+    public void RegistrarMuerte()
+    {
+        int muertes = PlayerPrefs.GetInt("muertesJugador", 0) + 1;
+        PlayerPrefs.SetInt("muertesJugador", muertes);
+    }
 
     IEnumerator MostrarDaño()
     {
@@ -151,5 +165,12 @@ public class Vida : MonoBehaviour
                 meshRenderers[i].materials[j].color = originalColors[i][j];
             }
         }
+    }
+
+    // Método para guardar la salud en PlayerPrefs
+    private void GuardarSalud()
+    {
+        PlayerPrefs.SetFloat("SaludPersistente", Salud);
+        PlayerPrefs.Save();
     }
 }

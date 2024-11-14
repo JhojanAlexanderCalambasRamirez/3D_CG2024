@@ -7,9 +7,9 @@ public class EnemyFollow : MonoBehaviour
 
 
     public float speed = 2.0f;               // Velocidad de movimiento del enemigo
-    public float rotationSpeed = 5.0f;       // Velocidad de rotaciÛn para seguir al jugador
-    public float attackRange = 2.0f;         // Distancia a la que el enemigo atacar· al jugador
-    public float daÒo = 10f;                 // Cantidad de daÒo que el enemigo hace al jugador
+    public float rotationSpeed = 5.0f;       // Velocidad de rotaci√≥n para seguir al jugador
+    public float attackRange = 2.0f;         // Distancia a la que el enemigo atacar√° al jugador
+    public float da√±o = 10f;                 // Cantidad de da√±o que el enemigo hace al jugador
     public float tiempoEntreAtaques = 1.0f;  // Tiempo en segundos entre ataques
     public float activationRange = 8.0f;    // Rango en el que el enemigo se activa
     public float deactivationRange = 15.0f;  // Rango en el que el enemigo se desactiva
@@ -37,17 +37,17 @@ public class EnemyFollow : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontrÛ ning˙n objeto con el tag 'Player1'.");
+            Debug.LogError("No se encontr√≥ ning√∫n objeto con el tag 'Player1'.");
         }
 
-        // ObtÈn el componente Animator del enemigo
+        // Obt√©n el componente Animator del enemigo
         animator = GetComponent<Animator>();
         if (animator == null)
         {
-            Debug.LogError("No se encontrÛ el componente Animator en el enemigo.");
+            Debug.LogError("No se encontr√≥ el componente Animator en el enemigo.");
         }
 
-        // Configura la animaciÛn inicial en Idle
+        // Configura la animaci√≥n inicial en Idle
         animator.SetTrigger("Idle");
     }
 
@@ -58,18 +58,18 @@ public class EnemyFollow : MonoBehaviour
             // Calcula la distancia entre el enemigo y el jugador
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-                // Activa el enemigo si el jugador est· dentro del rango de activaciÛn
+                // Activa el enemigo si el jugador est√° dentro del rango de activaci√≥n
                 if (!isActivated && distanceToPlayer <= activationRange)
                 {
                     isActivated = true; // Marca el enemigo como activado
-                    animator.ResetTrigger("Idle"); // Quita la animaciÛn de Idle
+                    animator.ResetTrigger("Idle"); // Quita la animaci√≥n de Idle
 
                 }
-                // Desactiva el enemigo si el jugador est· fuera del rango de desactivaciÛn
+                // Desactiva el enemigo si el jugador est√° fuera del rango de desactivaci√≥n
                 else if (isActivated && distanceToPlayer > deactivationRange)
                 {
 
-                    // Detener la animaciÛn de caminar si est· fuera del rango de detecciÛn
+                    // Detener la animaci√≥n de caminar si est√° fuera del rango de detecci√≥n
                     animator.ResetTrigger("Atacar");
 
                     isActivated = false;
@@ -77,7 +77,7 @@ public class EnemyFollow : MonoBehaviour
                     animator.SetBool("isRunning", false);
                 }
 
-                // Si el enemigo ha sido activado, sigue la lÛgica de movimiento y ataque
+                // Si el enemigo ha sido activado, sigue la l√≥gica de movimiento y ataque
                 if (isActivated)
                 {
                     if (distanceToPlayer <= attackRange)
@@ -89,7 +89,7 @@ public class EnemyFollow : MonoBehaviour
                         // Controlar el tiempo entre ataques
                         if (Time.time >= tiempoDesdeUltimoAtaque + tiempoEntreAtaques)
                         {
-                            vidaJugador.RecibirDaÒo(daÒo); // Aplica el daÒo al jugador
+                            vidaJugador.RecibirDa√±o(da√±o); // Aplica el da√±o al jugador
                             tiempoDesdeUltimoAtaque = Time.time;
                         }
                     }
@@ -98,7 +98,7 @@ public class EnemyFollow : MonoBehaviour
                         // Fuera del rango de ataque, pero dentro del rango de seguimiento
                         animator.SetBool("isRunning", true);
 
-                        // Movimiento y rotaciÛn hacia el jugador
+                        // Movimiento y rotaci√≥n hacia el jugador
                         Vector3 direction = (player.position - transform.position).normalized;
                         transform.position += direction * speed * Time.deltaTime;
 

@@ -7,12 +7,12 @@ public class InventoryManager : MonoBehaviour
 {
     public Button[] slots;
     public TextMeshProUGUI nombreObjetoSlot;  // Referencia al TextMeshPro para mostrar el nombre del objeto
-    private int selectedSlot = -1;
+    public int selectedSlot = -1;
     public CogerArmas cogerArmas;
     public PlayerMove playerMove;
-    public MisionesManager misionesManager;
+    public GameManager gameManager; // Nueva referencia al GameManager
 
-    private bool[] armasRecogidas = new bool[4];
+    public bool[] armasRecogidas = new bool[4];
 
     void Start()
     {
@@ -62,7 +62,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    void SelectSlot(int index)
+    public void SelectSlot(int index)
     {
         selectedSlot = index;
         UpdateSlotUI();
@@ -129,24 +129,28 @@ public class InventoryManager : MonoBehaviour
     public void CollectSwordBasica()
     {
         AssignSwordToSlot("SaveSword_Basica", 2, 0);
+        gameManager.CompletarMision("Sword_Basica");
     }
 
     public void CollectSwordRed()
     {
         AssignSwordToSlot("SaveSword_Red", 3, 1);
+        gameManager.CompletarMision("Sword_Red");
     }
 
     public void CollectSwordGreen()
     {
         AssignSwordToSlot("SaveSword_Green", 4, 2);
+
+        gameManager.CompletarMision("Sword_Green");
     }
 
     public void CollectSwordBlue()
     {
         AssignSwordToSlot("SaveSword_Blue", 5, 3);
 
-        // Llama a CompletarMision en el MisionesManager para completar la misión
-        misionesManager.CompletarMision("Sword_Blue");
+        // Completa la misión usando el GameManager
+        gameManager.CompletarMision("Sword_Blue");
     }
 
     void AssignSwordToSlot(string requiredTag, int slotIndex, int armaIndex)
