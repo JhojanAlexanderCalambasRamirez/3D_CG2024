@@ -28,8 +28,7 @@ public class NewBehaviourScript : MonoBehaviour
         // Obtén el componente Animator del enemigo
         animator = GetComponent<Animator>();
 
-        // Configura la animación inicial en Idle
-        animator.SetTrigger("Idle");
+
     }
 
     void Update()
@@ -72,7 +71,7 @@ public class NewBehaviourScript : MonoBehaviour
             else
             {
                 // Mantener la animación en Idle mientras el enemigo no esté activado
-                animator.SetTrigger("Idle");
+                
                 animator.SetBool("isRunning", false);
             }
         }
