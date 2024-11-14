@@ -8,7 +8,9 @@ public class PlayerAttack : MonoBehaviour
     public int dañoSword_Green = 40;
     public int dañoSword_Blue = 45;
     public float tiempoEntreAtaques = 0.5f;
-    public string tagEnemigo = "Enemigo"; // Tag para enemigos regulares
+    public string tagEnemigo = "Enemigo"; 
+    public string tagJefe = "Jefe";
+
 
     private float tiempoProximoAtaque;
     private bool hasSword = false;
@@ -39,7 +41,7 @@ public class PlayerAttack : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
         {
             // Verifica si el ataque golpea a un enemigo o al "Jefe"
-            if (hit.transform.CompareTag(tagEnemigo) || hit.transform.CompareTag("Jefe"))
+            if (hit.transform.CompareTag(tagEnemigo) || hit.transform.CompareTag(tagJefe))
             {
                 // Accede al script de vida del enemigo o jefe para aplicar el daño
                 VidaEnemigo enemigo = hit.transform.GetComponent<VidaEnemigo>();

@@ -988,6 +988,95 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 37496768}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &38644013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.19458
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4288995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.460213
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &38644014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 38644013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &46050693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6150,6 +6239,95 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1015401639651282186}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &369751279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.743137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4288995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.411549
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &369751280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 369751279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &373427575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8783,6 +8961,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoVida (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8838,6 +9026,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!1001 &513044002
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.653109
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.428899
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.9866753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &513044003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 513044002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &518459396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7409696531566903549, guid: 3964c23ae9838e84889ea6d65b5861aa,
@@ -10301,6 +10578,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoVida
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
@@ -16318,6 +16605,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoVida (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17516,6 +17813,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoVida (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18242,6 +18549,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoVida (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
@@ -22550,6 +22867,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5447768829328557966, guid: 7a9c2872915ad414e83307c9864abb76,
     type: 3}
   m_PrefabInstance: {fileID: 1309773379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1314691252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.314125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4289
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.710045
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &1314691253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 1314691252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1316398893 stripped
 GameObject:
@@ -29890,6 +30296,95 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 912380744}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1775643513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 35.69024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.428899
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.423462
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &1775643514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 1775643513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1779143081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6851746602139634862, guid: 3964c23ae9838e84889ea6d65b5861aa,
@@ -30416,6 +30911,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoVida (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
@@ -32191,6 +32696,95 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &1938037283
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.7588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4288995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.518448
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &1938037284 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 1938037283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1949227470 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6851746602139634862, guid: 3964c23ae9838e84889ea6d65b5861aa,
@@ -32427,6 +33021,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1938037284}
+  - {fileID: 1314691253}
+  - {fileID: 369751280}
+  - {fileID: 2044866112}
+  - {fileID: 513044003}
+  - {fileID: 1775643514}
+  - {fileID: 38644014}
   - {fileID: 234888457}
   - {fileID: 530897358}
   - {fileID: 1578982555}
@@ -33641,6 +34242,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8072014167217623078, guid: a4140530cfba26e4f88f22ea8174b6f4,
     type: 3}
   m_PrefabInstance: {fileID: 2042156432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2044866111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1972468073}
+    m_Modifications:
+    - target: {fileID: 1588244360284277507, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1599105069}
+    - target: {fileID: 3413565723743684415, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemigoVida (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.64433
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4288995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 31.361542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb6a9c377256c1244847be7492582981, type: 3}
+--- !u!4 &2044866112 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
+    type: 3}
+  m_PrefabInstance: {fileID: 2044866111}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2045736644 stripped
 GameObject:
@@ -36192,6 +36882,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoVida (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246389403959678039, guid: bb6a9c377256c1244847be7492582981,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7164384912917788006, guid: bb6a9c377256c1244847be7492582981,
         type: 3}
