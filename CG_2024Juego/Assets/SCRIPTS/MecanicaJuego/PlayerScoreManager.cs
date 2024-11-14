@@ -28,9 +28,9 @@ public class PlayerScoreManager : MonoBehaviour
     // Método para llamar cuando un enemigo normal es derrotado
     public void EnemigoDerrotado()
     {
-        
         puntosAcumulados += 10;
-        GameManager.Instance.contadorEnemigos++;
+        contadorEnemigos++;  // Incrementa el contador directamente en PlayerScoreManager
+        GameManager.Instance.contadorEnemigos = contadorEnemigos;  // Si quieres mantener el contador global actualizado
         ActualizarUI();
     }
 
