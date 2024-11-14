@@ -8500,6 +8500,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.46711418, y: 1.8165444, z: 0.2893574}
   m_Center: {x: -0.0007416606, y: 0.6486705, z: -0.00021986663}
+--- !u!114 &583322517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583322513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392652c18dcd92c4db4a1828b9dd3ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594380695
 GameObject:
   m_ObjectHideFlags: 0
@@ -24049,6 +24061,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 583322515}
+    - targetCorrespondingSourceObject: {fileID: 4702214268574098200, guid: cfcca8a07668d6b459a95802f4831946,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 583322517}
   m_SourcePrefab: {fileID: 100100000, guid: cfcca8a07668d6b459a95802f4831946, type: 3}
 --- !u!114 &1744081574 stripped
 MonoBehaviour:
@@ -24501,6 +24517,58 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2129391809}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1800772174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800772176}
+  - component: {fileID: 1800772175}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1800772175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800772174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4957d54f252aa194a91cb36abfd55d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaJugador: 100
+  contadorColisiones: 0
+  puntosAcumulados: 0
+  misionesCompletadas:
+  - Sword_Basica
+  armasRecogidas: 01000000
+  contadorEnemigos: 0
+  jefesMatados: 0
+--- !u!4 &1800772176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800772174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 570.5931, y: 43.490677, z: 284.72275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1807700290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28838,3 +28906,4 @@ SceneRoots:
   - {fileID: 637990213}
   - {fileID: 2100577496}
   - {fileID: 353997131}
+  - {fileID: 1800772176}

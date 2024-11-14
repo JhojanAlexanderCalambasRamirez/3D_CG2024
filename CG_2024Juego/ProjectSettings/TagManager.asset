@@ -24,12 +24,7 @@ TagManager:
   - SaveSword_Blue
   - Ground
   - Items
-<<<<<<< HEAD
   - Jefe
-  - jefe
-=======
-  - Teletransporte
->>>>>>> origin/Alexander
   layers:
   - Default
   - TransparentFX
