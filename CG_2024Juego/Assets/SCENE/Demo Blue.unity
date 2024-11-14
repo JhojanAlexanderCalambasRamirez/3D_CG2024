@@ -5973,6 +5973,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 628307631209973171, guid: 8dfbbda90fe92244c8642fa9b254e3ac,
+        type: 3}
+      propertyPath: m_CustomSkybox
+      value: 
+      objectReference: {fileID: 2100000, guid: 656058fe318eb48558d21d66d1a79a2b, type: 2}
     - target: {fileID: 1007064281571414673, guid: 8dfbbda90fe92244c8642fa9b254e3ac,
         type: 3}
       propertyPath: missionTexts.Array.data[0]

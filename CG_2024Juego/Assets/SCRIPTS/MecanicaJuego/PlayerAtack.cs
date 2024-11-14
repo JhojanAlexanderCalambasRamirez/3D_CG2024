@@ -38,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
         {
-            if (hit.transform.CompareTag(tagEnemigo))
+            if (hit.transform.CompareTag(tagEnemigo) || hit.transform.CompareTag("Jefe"))
             {
                 // Cambiar a la clase 'Vida' en lugar de 'HealthManager'
                 Vida enemigo = hit.transform.GetComponent<Vida>();

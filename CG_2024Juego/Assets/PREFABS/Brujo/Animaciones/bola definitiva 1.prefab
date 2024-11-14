@@ -9674,6 +9674,7 @@ GameObject:
   - component: {fileID: 4361488433837207876}
   - component: {fileID: 3201036579981134507}
   - component: {fileID: 4807899416143401801}
+  - component: {fileID: 5355581917971503292}
   m_Layer: 0
   m_Name: bola definitiva 1
   m_TagString: Untagged
@@ -9764,7 +9765,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -9809,6 +9810,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c70eac3768df584bad4f7250c4dbcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5355581917971503292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867577974124151045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4bb2884546e56e41bf17af892e1ed66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "da\xF1o": 10
 --- !u!1 &5890639173629609581
 GameObject:
   m_ObjectHideFlags: 0
