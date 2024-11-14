@@ -4,27 +4,55 @@ using UnityEngine.SceneManagement;
 public class MenuMuerteController : MonoBehaviour
 {
     public GameObject panelDead;
+    private CanvasGroup canvasGroupCanvas;  // Controla el canvas principal
+    private CanvasGroup canvasGroupDead;    // Controla el panel de muerte
 
     void Start()
     {
-        panelDead.SetActive(false);
+        // Obtén o añade el CanvasGroup al canvas principal
+        canvasGroupCanvas = GetComponent<CanvasGroup>();
+        if (canvasGroupCanvas == null)
+        {
+            canvasGroupCanvas = gameObject.AddComponent<CanvasGroup>();
+        }
+
+        // Obtén o añade el CanvasGroup al panel de muerte
+        if (panelDead != null)
+        {
+            canvasGroupDead = panelDead.GetComponent<CanvasGroup>();
+            if (canvasGroupDead == null)
+            {
+                canvasGroupDead = panelDead.AddComponent<CanvasGroup>();
+            }
+            panelDead.SetActive(false); // Asegurarse de que esté desactivado al inicio
+        }
     }
 
     public void ActivarMenuMuerte()
     {
-        panelDead.SetActive(true);
-        Time.timeScale = 1f;
+        // Desactivar la interacción en el canvas principal (todo menos el panel "Dead")
+        canvasGroupCanvas.interactable = false;
+        canvasGroupCanvas.blocksRaycasts = false;
+
+        // Activar el panel de muerte y permitir su interacción
+        if (panelDead != null)
+        {
+            panelDead.SetActive(true);
+            canvasGroupDead.interactable = true;
+            canvasGroupDead.blocksRaycasts = true;
+        }
+
+        Time.timeScale = 0f; // Pausar el juego
     }
 
     public void RecargarEscena()
     {
-        // Restablecer los datos del jugador en GameManager
         if (GameManager.Instance != null)
         {
             GameManager.Instance.ReiniciarDatosJugador();
         }
 
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // Restaurar el tiempo del juego
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -35,8 +63,7 @@ public class MenuMuerteController : MonoBehaviour
             GameManager.Instance.ReiniciarDatosJugador();
         }
 
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; // Restaurar el tiempo del juego
         SceneManager.LoadScene("MenuPrincipal");
     }
-
 }

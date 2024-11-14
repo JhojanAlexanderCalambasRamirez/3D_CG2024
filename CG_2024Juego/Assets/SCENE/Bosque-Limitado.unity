@@ -390241,7 +390241,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7190365950070382384}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2066863474
+--- !u!225 &2066863474
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066863469}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &2066863475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406834,7 +406846,7 @@ PrefabInstance:
         type: 3}
       propertyPath: menuMuerteController
       value: 
-      objectReference: {fileID: 2066863474}
+      objectReference: {fileID: 2066863475}
     - target: {fileID: 8527830609177188642, guid: 8dfbbda90fe92244c8642fa9b254e3ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -407002,10 +407014,25 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 2066863475}
+    - target: {fileID: 6310267468911602525, guid: b51f71da8fc4e804bbb20386f891f460,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310267468911602525, guid: b51f71da8fc4e804bbb20386f891f460,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RecargarEscena
       objectReference: {fileID: 0}
     - target: {fileID: 6407669308127762075, guid: b51f71da8fc4e804bbb20386f891f460,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614330359307516041, guid: b51f71da8fc4e804bbb20386f891f460,
+        type: 3}
+      propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6616172696310365569, guid: b51f71da8fc4e804bbb20386f891f460,
@@ -407082,11 +407109,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2066863475}
     - target: {fileID: 8794598310166509503, guid: b51f71da8fc4e804bbb20386f891f460,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794598310166509503, guid: b51f71da8fc4e804bbb20386f891f460,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IrAlMenuPrincipal
       objectReference: {fileID: 0}
     - target: {fileID: 9091453064981649479, guid: b51f71da8fc4e804bbb20386f891f460,
         type: 3}
@@ -407112,6 +407144,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2066863474}
+    - targetCorrespondingSourceObject: {fileID: 571104017815391107, guid: b51f71da8fc4e804bbb20386f891f460,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2066863475}
   m_SourcePrefab: {fileID: 100100000, guid: b51f71da8fc4e804bbb20386f891f460, type: 3}
 --- !u!114 &7190365950070382385 stripped
 MonoBehaviour:

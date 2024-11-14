@@ -24,11 +24,9 @@ TagManager:
   - SaveSword_Blue
   - Ground
   - Items
-<<<<<<<<< Temporary merge branch 1
   - Teletransporte
-=========
   - Jefe
->>>>>>>>> Temporary merge branch 2
+  - jefe
   layers:
   - Default
   - TransparentFX
