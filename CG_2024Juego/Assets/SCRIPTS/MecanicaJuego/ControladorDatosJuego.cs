@@ -2,7 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+/**
+* Clase que controla el guardado y la carga de datos del juego, incluyendo la posición del jugador,
+* su nombre, puntaje e ítems recolectados. Permite cargar y guardar estos datos en un archivo JSON.
+* @author Alexander Calambas - 2190555
+* @author Juan Manuel Santos - 2215928
+* @author Juan David Rios - 2225674
+* @date 11 noviembre 2024
+* @version 1.0
+*/
 public class ControladorDatosJuego : MonoBehaviour
 {
     public GameObject jugador;
@@ -30,7 +38,10 @@ public class ControladorDatosJuego : MonoBehaviour
             GuardarDatos();
         }
     }
-
+    /**
+  * Carga los datos del archivo JSON y actualiza los valores de posición, nombre, puntaje e ítems del jugador en el juego.
+  * @return Ninguno
+  */
     private void CargarDatos()
     {
         // Verificamos si el archivo existe antes de intentar leerlo
@@ -55,9 +66,12 @@ public class ControladorDatosJuego : MonoBehaviour
             Debug.Log("El archivo de guardado no existe.");
         }
     }
+    /**
+    * Guarda la posición actual del jugador y otros datos relevantes en un archivo JSON.
+    * @return Ninguno
+    */
 
-
-private void GuardarDatos()
+    private void GuardarDatos()
     {
         // Creamos un nuevo objeto DatosJuego para guardar la posición actual del jugador y otros datos
         DatosJuego nuevosDatos = new DatosJuego()
@@ -78,7 +92,11 @@ private void GuardarDatos()
     }
 
 }
-
+/**
+* Clase que almacena la estructura de los datos del juego, incluyendo posición, nombre, puntaje e ítems.
+* Sirve como modelo para la serialización y deserialización de los datos en formato JSON.
+* @return Ninguno
+*/
 public class DatosJuego
 {
     public Vector3 posicion;  // Guardamos la posición del jugador

@@ -1,15 +1,25 @@
-//Alexander Calambas - 2190555
-//Juan Manuel Santos - 2215928
-//Juan David Rios - 2225674
 
 
 using UnityEngine;
 using TMPro;  // Importamos el namespace de TextMeshPro
-
+/**
+* Clase que gestiona la carga del nombre del jugador desde PlayerPrefs y lo asigna a un objeto de texto en la interfaz.
+* Utiliza TextMeshPro para mostrar el nombre guardado previamente.
+* @author Alexander Calambas - 2190555
+* @author Juan Manuel Santos - 2215928
+* @author Juan David Rios - 2225674
+* @date 11 noviembre 2024
+* @version 1.0
+*/
 public class CargaName : MonoBehaviour
 {
     private TMP_Text nombreText;  // Cambiamos a TMP_Text para TextMeshPro
 
+    /**
+   * Método llamado al inicio del juego. Busca el objeto con la etiqueta "nombre1" y carga el nombre almacenado en PlayerPrefs.
+   * Si no se encuentra el objeto, se muestra un error en la consola.
+   * @return Ninguno
+   */
     private void Start()  // Corrige la S mayúscula en Start
     {
         // Buscamos el objeto por su tag y obtenemos el componente TMP_Text

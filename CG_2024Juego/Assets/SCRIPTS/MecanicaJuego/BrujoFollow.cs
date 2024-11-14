@@ -2,7 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/**
+* Clase que controla el comportamiento del enemigo Brujo en el juego.
+* El Brujo persigue al jugador y lanza bolas de fuego cuando está en rango de ataque.
+* @author Alexander Calambas - 2190555
+* @author Juan Manuel Santos - 2215928
+* @author Juan David Rios - 2225674
+* @date 11 noviembre 2024
+* @version 1.0
+*/
 public class Brujo : MonoBehaviour
 {
     public float speed = 2.0f;           // Velocidad de movimiento del enemigo
@@ -16,6 +24,13 @@ public class Brujo : MonoBehaviour
     private Transform player;
     private Animator animator;
     private bool isActivated = false;     // Indica si el enemigo ha sido activado
+
+
+    /**
+    * Método de inicialización que busca al jugador en la escena y configura el animador.
+    * @param Ninguno
+    * @return Ninguno
+    */
 
     void Start()
     {
@@ -32,6 +47,12 @@ public class Brujo : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetTrigger("Idle"); // Comienza en animación Idle
     }
+
+    /**
+   * Actualiza la lógica del Brujo en cada frame, incluyendo su activación, movimiento y ataque.
+   * @param Ninguno
+   * @return Ninguno
+   */
 
     void Update()
     {
@@ -77,7 +98,12 @@ public class Brujo : MonoBehaviour
         }
     }
 
-    // Método que será llamado desde el evento de animación
+    /**
+    * Dispara una bola de fuego hacia la posición del jugador.
+    * Este método se llama desde un evento de animación para crear y lanzar la bola de fuego.
+    * @param Ninguno
+    * @return Ninguno
+    */
     public void DispararBolaDeFuego()
     {
         if (player == null) return;
