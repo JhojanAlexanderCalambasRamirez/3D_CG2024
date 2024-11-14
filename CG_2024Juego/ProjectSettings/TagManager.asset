@@ -17,7 +17,6 @@ TagManager:
   - nombre1
   - Player2
   - Enemigo
-  - Jefe
   - Sword
   - SaveSword_Basica
   - SaveSword_Red
@@ -25,6 +24,8 @@ TagManager:
   - SaveSword_Blue
   - Ground
   - Items
+  - Jefe
+  - jefe
   layers:
   - Default
   - TransparentFX

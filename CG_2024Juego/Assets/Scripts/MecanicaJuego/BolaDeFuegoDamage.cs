@@ -7,20 +7,19 @@ public class BolaDeFuegoDamage : MonoBehaviour
 {
     public float daño = 10.0f; // Ajusta el valor del daño según lo que prefieras
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player1"))
+        if (other.CompareTag("Player1"))
         {
-            // Busca el componente de vida en el jugador y aplica daño
-            Vida vidaJugador = collision.gameObject.GetComponent<Vida>();
+            Vida vidaJugador = other.GetComponent<Vida>();
             if (vidaJugador != null)
             {
-                vidaJugador.RecibirDaño(daño, true); // Indica que es ataque del jefe
+                vidaJugador.RecibirDaño(daño, true); // Ajusta el daño
             }
 
-            // Destruir la bola de fuego tras el impacto
             Destroy(gameObject);
         }
     }
+
 }
 
