@@ -11,12 +11,10 @@ public class Vida : MonoBehaviour
     public Text TextoSalud;
 
     public Animator animator;
-
     private SkinnedMeshRenderer[] meshRenderers;
     private List<Color[]> originalColors = new List<Color[]>();
 
     public MenuMuerteController menuMuerteController;
-
     public bool muertePorJefe = false;
     public bool muertePorEnemigo = false;
 
@@ -35,10 +33,7 @@ public class Vida : MonoBehaviour
         }
 
         // Limitar la salud al valor máximo
-        if (Salud > SaludMaxima)
-        {
-            Salud = SaludMaxima;
-        }
+        Salud = Mathf.Clamp(Salud, 0, SaludMaxima);
 
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach (var renderer in meshRenderers)
@@ -56,7 +51,7 @@ public class Vida : MonoBehaviour
     {
         ActualizarInterfaz();
 
-        if (Salud <= 0 && menuMuerteController != null && !menuMuerteController.menuMuerte.activeSelf)
+        if (Salud <= 0 && menuMuerteController != null && !menuMuerteController.panelDead.activeSelf)
         {
             if (muertePorJefe)
             {
@@ -67,17 +62,13 @@ public class Vida : MonoBehaviour
                 animator.Play("EnemigosMeMata");
             }
 
-            menuMuerteController.ActivarMenuMuerte();
+            StartCoroutine(OnDeath());
         }
     }
 
     public void RecibirCura(float cura)
     {
-        Salud += cura;
-        if (Salud > SaludMaxima)
-        {
-            Salud = SaludMaxima;
-        }
+        Salud = Mathf.Min(Salud + cura, SaludMaxima);
         GuardarSalud();
     }
 
@@ -106,13 +97,8 @@ public class Vida : MonoBehaviour
 
     private IEnumerator OnDeath()
     {
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("JefeMeMata") && !animator.GetCurrentAnimatorStateInfo(0).IsName("EnemigosMeMata"))
-        {
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
+        // Espera un pequeño retraso antes de activar el menú de muerte
+        yield return new WaitForSeconds(0.5f);
         menuMuerteController.ActivarMenuMuerte();
     }
 
@@ -135,7 +121,7 @@ public class Vida : MonoBehaviour
         PlayerPrefs.SetInt("muertesJugador", muertes);
     }
 
-    IEnumerator MostrarDaño()
+    private IEnumerator MostrarDaño()
     {
         Color moderateRed = new Color(0.6f, 0.2f, 0.2f, 1f);
 
