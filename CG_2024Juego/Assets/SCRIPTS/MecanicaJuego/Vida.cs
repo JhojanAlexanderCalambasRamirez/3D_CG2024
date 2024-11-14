@@ -26,15 +26,20 @@ public class Vida : MonoBehaviour
             return;
         }
 
-        // Cargar el valor de salud desde PlayerPrefs si existe
-        if (PlayerPrefs.HasKey("SaludPersistente"))
+        // Configurar la salud al valor del GameManager si está disponible, o al máximo
+        if (GameManager.Instance != null)
         {
-            Salud = PlayerPrefs.GetFloat("SaludPersistente");
+            Salud = GameManager.Instance.vidaJugador;
+        }
+        else
+        {
+            Salud = SaludMaxima;
         }
 
         // Limitar la salud al valor máximo
         Salud = Mathf.Clamp(Salud, 0, SaludMaxima);
 
+        // Inicialización de renderizadores, colores y barra de salud
         meshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
         foreach (var renderer in meshRenderers)
         {
@@ -46,6 +51,7 @@ public class Vida : MonoBehaviour
             originalColors.Add(colors);
         }
     }
+
 
     void Update()
     {
@@ -97,7 +103,6 @@ public class Vida : MonoBehaviour
 
     private IEnumerator OnDeath()
     {
-        // Espera un pequeño retraso antes de activar el menú de muerte
         yield return new WaitForSeconds(0.5f);
         menuMuerteController.ActivarMenuMuerte();
     }
@@ -153,7 +158,6 @@ public class Vida : MonoBehaviour
         }
     }
 
-    // Método para guardar la salud en PlayerPrefs
     private void GuardarSalud()
     {
         PlayerPrefs.SetFloat("SaludPersistente", Salud);

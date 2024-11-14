@@ -26,10 +26,20 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject); // Evita que se destruya entre escenas
         }
     }
+
     public void CompletarMision(string nombreMision)
     {
-        // Implementación del método para completar una misión
         Debug.Log("Misión completada: " + nombreMision);
-        // Aquí puedes añadir la lógica para completar la misión
+        // Lógica para completar la misión
     }
+
+    // Método para reiniciar los datos del jugador al recargar la escena
+    public void ReiniciarDatosJugador()
+    {
+        vidaJugador = 100; // Restablece vida al máximo
+        contadorColisiones = 0;
+        puntosAcumulados = 0;
+        // Puedes resetear otras variables si es necesario
+    }
+
 }
