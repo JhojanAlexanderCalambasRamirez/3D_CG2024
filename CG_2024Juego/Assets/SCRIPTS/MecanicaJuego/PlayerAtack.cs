@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public int dañoSword_Green = 40;
     public int dañoSword_Blue = 45;
     public float tiempoEntreAtaques = 0.5f;
-    public string tagEnemigo = "Enemigo";
+    public string tagEnemigo = "Enemigo"; // Tag para enemigos regulares
 
     private float tiempoProximoAtaque;
     private bool hasSword = false;
@@ -33,15 +33,16 @@ public class PlayerAttack : MonoBehaviour
     private void Atacar()
     {
         int daño = hasSword ? ObtenerDañoArma(selectedWeaponIndex) : dañoPuño;
-        Debug.Log("Ataque con puño, daño aplicado: " + daño);
+        Debug.Log("Ataque ejecutado, daño aplicado: " + daño);
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 2.0f))
         {
+            // Verifica si el ataque golpea a un enemigo o al "Jefe"
             if (hit.transform.CompareTag(tagEnemigo) || hit.transform.CompareTag("Jefe"))
             {
-                // Cambiar a la clase 'Vida' en lugar de 'HealthManager'
-                Vida enemigo = hit.transform.GetComponent<Vida>();
+                // Accede al script de vida del enemigo o jefe para aplicar el daño
+                VidaEnemigo enemigo = hit.transform.GetComponent<VidaEnemigo>();
                 if (enemigo != null)
                 {
                     enemigo.RecibirDaño(daño);
@@ -55,7 +56,7 @@ public class PlayerAttack : MonoBehaviour
         if (slotIndex >= 2 && slotIndex < 6)
         {
             hasSword = true;
-            selectedWeaponIndex = slotIndex - 2; // Ajuste de índice para armas
+            selectedWeaponIndex = slotIndex - 2;
             cogerArmas.ActivarArmar(selectedWeaponIndex);
             Debug.Log("Arma seleccionada: " + selectedWeaponIndex);
         }
