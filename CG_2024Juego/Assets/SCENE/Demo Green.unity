@@ -182,6 +182,57 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 10590558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &15783564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 15783566}
+  - component: {fileID: 15783565}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &15783565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15783564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4957d54f252aa194a91cb36abfd55d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaJugador: 100
+  contadorColisiones: 0
+  puntosAcumulados: 0
+  misionesCompletadas: []
+  armasRecogidas: 00000000
+  contadorEnemigos: 0
+  jefesMatados: 0
+--- !u!4 &15783566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15783564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 498.0628, y: 41.633762, z: 256.03687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &22043037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34205,6 +34256,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1564565310}
+    - targetCorrespondingSourceObject: {fileID: 6080771730089357295, guid: e19661430141b4c45b82dd254d886c23,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1564565311}
   m_SourcePrefab: {fileID: 100100000, guid: e19661430141b4c45b82dd254d886c23, type: 3}
 --- !u!4 &1564565305 stripped
 Transform:
@@ -34253,6 +34308,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.46711418, y: 1.8165444, z: 0.2893574}
   m_Center: {x: -0.0007416606, y: 0.6486704, z: -0.00021986663}
+--- !u!114 &1564565311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564565306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392652c18dcd92c4db4a1828b9dd3ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1564846784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48173,3 +48240,4 @@ SceneRoots:
   - {fileID: 1615716013}
   - {fileID: 818934370}
   - {fileID: 1738590515}
+  - {fileID: 15783566}

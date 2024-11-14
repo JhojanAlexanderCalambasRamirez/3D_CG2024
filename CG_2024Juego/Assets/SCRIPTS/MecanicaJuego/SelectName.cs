@@ -69,6 +69,6 @@ public class SelectName : MonoBehaviour
     public void jugar()
     {
         // Cambiar de escena a la de juego
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Bosque-Limitado");
     }
 }

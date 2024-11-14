@@ -28,15 +28,16 @@ public class PlayerScoreManager : MonoBehaviour
     // Método para llamar cuando un enemigo normal es derrotado
     public void EnemigoDerrotado()
     {
-        contadorEnemigos++;
+        
         puntosAcumulados += 10;
+        GameManager.Instance.contadorEnemigos++;
         ActualizarUI();
     }
 
     // Método para llamar cuando un jefe es derrotado
     public void JefeDerrotado()
     {
-        jefesMatados++;
+        GameManager.Instance.jefesMatados++;
         puntosAcumulados += 50; // O cualquier valor que desees para jefes
         ActualizarUI();
     }
