@@ -4,38 +4,42 @@ using UnityEngine.SceneManagement;
 public class MenuMuerteController : MonoBehaviour
 {
     public GameObject panelDead;
-    private CanvasGroup canvasGroupDead;
+    private CanvasGroup canvasGroupCanvas;  // Controla el canvas principal
+    private CanvasGroup canvasGroupDead;    // Controla el panel de muerte
 
     void Start()
     {
-        // Asegurarse de que el panel de muerte esté inicialmente desactivado
+        // Obtén o añade el CanvasGroup al canvas principal
+        canvasGroupCanvas = GetComponent<CanvasGroup>();
+        if (canvasGroupCanvas == null)
+        {
+            canvasGroupCanvas = gameObject.AddComponent<CanvasGroup>();
+        }
+
+        // Obtén o añade el CanvasGroup al panel de muerte
         if (panelDead != null)
         {
-            panelDead.SetActive(false);
-
-            // Obtener o añadir el CanvasGroup al panel de muerte
             canvasGroupDead = panelDead.GetComponent<CanvasGroup>();
             if (canvasGroupDead == null)
             {
                 canvasGroupDead = panelDead.AddComponent<CanvasGroup>();
             }
-
-            // Configuración inicial del CanvasGroup para que esté inactivo
-            canvasGroupDead.alpha = 0f;
-            canvasGroupDead.interactable = false;
-            canvasGroupDead.blocksRaycasts = false;
+            panelDead.SetActive(false); // Asegurarse de que esté desactivado al inicio
         }
     }
 
     public void ActivarMenuMuerte()
     {
+        // Desactivar la interacción en el canvas principal (todo menos el panel "Dead")
+        canvasGroupCanvas.interactable = false;
+        canvasGroupCanvas.blocksRaycasts = false;
+
+        // Activar el panel de muerte y permitir su interacción
         if (panelDead != null)
         {
-            // Hacer visible e interactivo el panel de muerte
             panelDead.SetActive(true);
-            canvasGroupDead.alpha = 1f;           // Asegura que el panel sea completamente visible
-            canvasGroupDead.interactable = true;  // Permitir la interacción con los botones
-            canvasGroupDead.blocksRaycasts = true; // Bloquear interacciones con otros elementos
+            canvasGroupDead.interactable = true;
+            canvasGroupDead.blocksRaycasts = true;
         }
 
         Time.timeScale = 0f; // Pausar el juego
