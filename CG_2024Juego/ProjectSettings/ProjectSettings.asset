@@ -951,11 +951,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: c43f165c-b41c-4558-8827-6b5e565fc756
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Dungeon Castle Environment
-  organizationId: 
+  projectName: CG_2024Juego
+  organizationId: unity_16b5e5ddf2ff9c4b8541
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

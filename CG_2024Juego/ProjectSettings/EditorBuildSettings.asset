@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SCENE/MenuPrincipal.unity
+    guid: 49a368f843d382441b4065d8b5bfa20d
+  - enabled: 1
+    path: Assets/SCENE/Mina.unity
+    guid: 117fd0fe1401a1148a97cb9de246ad0a
+  - enabled: 1
+    path: Assets/SCENE/Bosque-Limitado.unity
+    guid: c0d944ca9defd20449bc336e50d75a08
+  - enabled: 1
+    path: Assets/SCENE/Ciudad.unity
+    guid: becca19b86da74b4696c89ff8d644228
+  - enabled: 1
+    path: Assets/SCENE/Demo Red.unity
+    guid: b791bc3d9b029a14692929716d502bc3
+  - enabled: 1
+    path: Assets/SCENE/Demo Green.unity
+    guid: 0f30b31df1c21274da0aa193ec9e46e6
+  - enabled: 1
+    path: Assets/SCENE/Demo Blue.unity
+    guid: 27915ac565aadf048b89a94d619c501d
+  - enabled: 1
+    path: Assets/SCENE/MenuFinal.unity
+    guid: 7cd6441dcea2d6443b0cfaa6ca1bbfd6
+  - enabled: 1
+    path: Assets/SCENE/InicioJuegoHillVideo.unity
+    guid: fec9d1c026615f141bf43c183e1600d4
   m_configObjects: {}

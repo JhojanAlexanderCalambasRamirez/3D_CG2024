@@ -9,6 +9,30 @@ TagManager:
   - Animal
   - Water
   - Stair
+  - Player1
+  - ZonaVerde
+  - ZonaRoja
+  - ZonaAzul
+  - Nombre1
+  - nombre1
+  - Player2
+  - Enemigo
+  - Sword
+  - SaveSword_Basica
+  - SaveSword_Red
+  - SaveSword_Green
+  - SaveSword_Blue
+  - Ground
+  - Items
+<<<<<<<<< Temporary merge branch 1
+<<<<<<< HEAD
+  - Jefe
+
+=======
+  - Teletransporte
+>>>>>>> origin/Alexander
+=========
+>>>>>>>>> Temporary merge branch 2
   layers:
   - Default
   - TransparentFX
@@ -21,7 +45,7 @@ TagManager:
   - PostProcessing
   - Snapshot Zone
   - Player
-  - 
+  - Ground
   - 
   - 
   - 
